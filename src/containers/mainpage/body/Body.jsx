@@ -11,7 +11,7 @@ import emailjs from '@emailjs/browser';
 import {useEffect, useRef, useState} from "react";
 import appstore from "../../../assets/images/appstore.png";
 import android from "../../../assets/images/Android.png";
-import videoBG from '../../../assets/images/WEB_BG.mp4';
+import videoBG from '../../../assets/images/background.mp4';
 import advancedaiimg from "../../../assets/images/advandecai.png";
 import rightarrow from "../../../assets/images/rightarrow.png";
 import styled, { keyframes } from 'styled-components';
