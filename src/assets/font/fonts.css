@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'GothamRoundedBold';
+    font-style: normal;
+    src: url('./GothamRounded-Bold.otf'); /* IE9 Compat Modes */
+    src: local('GothamRoundedBold'),
+    url('./GothamRounded-Bold.otf') format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+    font-family: 'GothamRoundedRegular';
+    font-style: normal;
+    src: url('./GothamRounded-Medium.otf'); /* IE9 Compat Modes */
+    src: local('GothamRoundedRegular'),
+    url('./GothamRounded-Medium.otf') format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+    font-family: 'GothamRoundedLight';
+    font-style: normal;
+    src: url('./GothamRounded-Light.otf'); /* IE9 Compat Modes */
+    src: local('GothamRoundedRegular'),
+    url('./GothamRounded-Light.otf') format('truetype'), /* Safari, Android, iOS */
+}
+@font-face {
+    font-family: 'GothamRoundedBook';
+    font-style: normal;
+    src: url('./GothamRounded-Book.otf'); /* IE9 Compat Modes */
+    src: local('GothamRoundedBook'),
+    url('./GothamRounded-Book.otf') format('truetype'), /* Safari, Android, iOS */
+}
+
