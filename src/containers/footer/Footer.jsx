@@ -4,6 +4,7 @@ import twitter from "../../assets/images/twitter.png";
 import appstore from "../../assets/images/appstore.png";
 import policy from "../../assets/AyawaPrivacyPolciy.pdf";
 import terms from "../../assets/AyawaTermsandConditions.pdf";
+import ua from "../../assets/images/ua.png";
 import './style.scss';
 
 const Footer = () => {
@@ -12,7 +13,7 @@ const Footer = () => {
             <div className={'credits'}>
                 <div className={'from'}>
                     <img src={logo} className={'footer-logo'}/>
-                    <p>MADE WITH &#128151; IN UKRAINE</p>
+                    <p>MADE WITH &#128151; IN <img src={ua} className={'ua'}/> UKRAINE</p>
                 </div>
 
                 <div className={'social'}>
