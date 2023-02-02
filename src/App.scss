@@ -9,10 +9,10 @@
   align-items: center;
   text-align: center;
   background: radial-gradient(100% 53.57% at 100% 0%,
-          rgba(255, 255, 255, 0.09) 0%,
-          rgba(0, 0, 0, 0) 100%,
-          rgba(255, 255, 255, 0) 100%),
-  linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #1E1F1F;
+            rgba(255, 255, 255, 0.09) 0%, rgba(0, 0, 0, 0) 100%,
+            rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+          linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #1E1F1F;
+  background-blend-mode: normal, soft-light, normal, normal;
 }
 
 .App-logo {

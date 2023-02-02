@@ -284,9 +284,9 @@ const Body = () => {
                     Hopefully we’ll be able to release advanced AI features as a part of the closest update.</p>
                 <p>Thank you for your patience and support!</p>
                 {
-                    !isSubmit?
+                    isSubmit?
                         <div className="alert">
-                            {!isCorrectEmail ?
+                            {isCorrectEmail ?
                                 <FadeDiv>
                                     <img src={complete}/>
                                     <span className="succsess-text">You've successfully subscribed</span>
