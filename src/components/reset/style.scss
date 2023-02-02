@@ -1,92 +1,92 @@
 .reset{
-  overflow-y: hidden;
   height: 70vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  .message{
-    width: 1240px;
+  font-family: GothamRoundedLight;
+  .window{
+    width: 590px;
+    height: 424px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    .window{
-      background-size:cover;
-      width: 600px;
-      height: 370px;
+    margin: 10vh 0;
+    z-index: 999;
+    video{
+      border-radius: 16px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .inner-content{
+      height: 300px;
+      position: absolute;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      margin: 10vh 0;
-      z-index: 999;
-      video{
-        border-radius: 16px;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+      justify-content: space-between;
+      img{
+        width: 30px;
+        height: 30px;
       }
-      .window-block{
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        height: 250px;
-        img{
-          opacity: 0.7;
-          width: 30px;
-          height: 30px;
-          margin-bottom: 2vh;
-        }
+      .title{
         h1{
-          font-family: GothamRoundedBook;
-          color: #ffffff;
-          font-size: 32px;
-          font-weight: 300;
-          width: 400px;
-          margin: 0;
-          opacity: 0.7;
-        }
-        p{
-          font-family: GothamRoundedLight;
-          width: 400px!important;
-          font-weight: 300;
-          color: #ffffff;
-          opacity: 0.7;
-          margin: 20px 0 0;
-          font-size: 16px;
+          margin: 10px 0;
+          color: #FFFFFF;
         }
         span{
-          color: #ffffff;
-          opacity: 0.7;
-          font-size: 16px;
-        }
-        .input-box{
-          display: flex;
-          .input-wrapper{
-            position: relative;
-            width: 300px;
-            display: flex;
-            justify-content: space-between;
-            input{
-              padding: 0 30px;
-              width: 100%;
-              height: 61px;
-              font-size: 16px;
-              background: rgba(255, 255, 255, 0.05);
-              border: 1px solid rgba(255, 255, 255, 0.1);
-              border-radius: 16px;
-              font-family: GothamRoundedLight;
-              outline: none;
-            }
-            .hide{
-              align-self: flex-start;
-              position: absolute;
-            }
+          color: #9f9f9f;
+          b{
+            color: #FFFFFF!important;
           }
         }
+      }
+      .input-box{
+        display: flex;
+        width: 400px;
+        justify-content: space-between;
+        .input-wrapper{
+          position: relative;
+          display: flex;
+          input{
+            font-family: GothamRoundedLight;
+            font-size: 16px;
+            font-weight: 300;
+            padding: 20px;
+            width: 273px;
+            height: 25px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            outline: none;
+          }
+          img{
+            position: absolute;
+            right: 0;
+            align-self: center;
+            margin-right: 20px;
+            width: 20px;
+            opacity: 0.5;
+            height: 16px;
+          }
+        }
+        button{
+          background: rgba(255, 255, 255, 0.1);
+          opacity: 0.5;
+          border-radius: 16px;
+          border: none;
+          width: 65px;
+          height: 65px;
+          img{
+            width: 16px;
+            height: 10px;
+          }
+        }
+      }
+      p{
+        margin-bottom: -10px;
+        width: 388px;
+        font-size: 10px;
+        color:#FFFFFF;
+        opacity: 0.5;
       }
     }
   }

@@ -18,10 +18,12 @@ import styled, { keyframes } from 'styled-components';
 import { fadeInDownBig } from 'react-animations';
 import danger from "../../../assets/images/dangertriangle.png";
 import complete from "../../../assets/images/complete.png";
+import {Parallax, ParallaxProvider, useParallax} from "react-scroll-parallax";
 
 const cardsImg = [check, analyse, improve];
 const blockicons = [hrv, repeat, activity];
 const fadeAnimation = keyframes`${fadeInDownBig}`;
+
 
 const FadeDiv = styled.div`
   animation: 1s ${fadeAnimation};
@@ -33,6 +35,8 @@ const Body = () => {
     const [isVivibleAlert, setIsVisibleAlert] = useState(false)
     const [isSubmit, setIsSubmit] = useState(false)
     const form = useRef()
+
+    const { ref } = useParallax<HTMLDivElement>({ speed: -22220 });
 
     const sendEmail = (e) => {
         e.preventDefault();
@@ -74,6 +78,7 @@ const Body = () => {
     const handleChangeEmail = (event) => {
         setEmail({value: event.target.value, error: ""})
     }
+    /*
     const showBtn = window.addEventListener('scroll', () => {
         const scrollToTop = document.querySelector('.iphone');
         if (window.scrollY <= 1100) {
@@ -81,12 +86,13 @@ const Body = () => {
         } else {
             scrollToTop.classList.remove('show-scroll');
         }
-        if(window.scrollY >=2100){
+        if(window.scrollY >=1100){
             scrollToTop.classList.add('end-scroll')
         }else{
             scrollToTop.classList.remove('end-scroll')
         }
     });
+    */
     return(
         <div className={'body-wrapper'}>
             <UpperBlock/>
@@ -116,7 +122,14 @@ const Body = () => {
                 </div>
             </div>
             <div className={'hrv-tracker'}>
-                <img alt={'phone'} src={iphone} className={'iphone'}/>
+                    <ParallaxProvider>
+                        <Parallax translateY={[0, 27]}>
+                            <div className={'ref'} ref={ref}>
+                                <img alt={'phone'} src={iphone} className={'iphone'}/>
+                            </div>
+                        </Parallax>
+                    </ParallaxProvider>
+                {/*<img alt={'phone'} src={iphone} className={'iphone layer1'}/>*/}
                 <div className={'hrv-des'}>
                     <h1>HRV Tracker</h1>
                     <p>

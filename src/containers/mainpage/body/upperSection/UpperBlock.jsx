@@ -9,12 +9,12 @@ const UpperBlock = () => {
 
     const showBtn = window.addEventListener('scroll', () => {
         const scrollToTop = document.querySelector('.phoneandclock');
-        if (window.scrollY < 1000) {
+        if (window.scrollY >= 0) {
             scrollToTop.classList.add('show-scroll');
         } else {
             scrollToTop.classList.remove('show-scroll');
         }
-        if(window.scrollY >920){
+        if(window.scrollY <=1020){
             scrollToTop.classList.add('end-scroll')
         }else{
             scrollToTop.classList.remove('end-scroll')

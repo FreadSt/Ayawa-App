@@ -10,23 +10,29 @@ import hide from "../../assets/images/Hide.png";
 const Reset = () => {
     return(
         <div className={'reset'}>
-            <div className={'message'}>
-                <div className={'window'}>
-                    <video src={videoBG} autoPlay loop muted alt={""}/>
-                    <div className={'window-block'}>
-                        <img src={image} alt={""}/>
-                        <h1 className={'window-title'}>Enter New Password</h1>
-                        <span>for name@mail.com account</span>
-                        <div className={'input-box'}>
-                            <div className={'input-wrapper'}>
-                                <input/>
-                                <img alt={""} src={hide} className={'hide'}/>
-                            </div>
-                            <button>
-                                <img alt={''} src={tick}/>
-                            </button>
-                        </div>
+            <div className={'window'}>
+                <video src={videoBG} autoPlay muted loop/>
+                <div className={'inner-content'}>
+                    <img src={image} alt={''} className={'main-img'}/>
+                    <div className={'title'}>
+                        <h1>Enter New Password</h1>
+                        <span>for <b>name@mail.com</b> account</span>
                     </div>
+                    <div className={"input-box"}>
+                        <div className={'input-wrapper'}>
+                            <input
+                                placeholder="New password"
+                            />
+                            <img className={'hide'} src={hide}/>
+                        </div>
+                        <button>
+                            <img src={tick}/>
+                        </button>
+                    </div>
+                    <p>
+                        Password must be at least 6 digits long and contain both uppercase
+                        and lowercase characters, number and special symbol
+                    </p>
                 </div>
             </div>
         </div>
