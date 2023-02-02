@@ -14,7 +14,7 @@ const UpperBlock = () => {
         } else {
             scrollToTop.classList.remove('show-scroll');
         }
-        if(window.scrollY <=1020){
+        if(window.scrollY <=1320){
             scrollToTop.classList.add('end-scroll')
         }else{
             scrollToTop.classList.remove('end-scroll')

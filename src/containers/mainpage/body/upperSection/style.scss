@@ -12,6 +12,7 @@
   .mobile-container{
     display: none;
   }
+  /*
   .show-scroll {
     top: 0;
     z-index: 999;
@@ -42,11 +43,48 @@
   .phoneandclock.end-scroll{
     width: 750px;
   }
+  */
+  .show-scroll {
+    top: 0;
+    z-index: 999;
+    right: 0;
+    position: fixed;
+    width: 900px!important;
+    transition: 350ms ease-in;
+    height: 760px!important;
+    margin-bottom: -10vh;
+  }
+  .phoneandclock{
+    width: 900px;
+    height: 760px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: -10vh;
+
+    position: sticky;
+  }
+  .phoneandclock show-scroll end-scroll{
+    width: 900px;
+  }
+  .end-scroll{
+    z-index: 999;
+    transition: 350ms ease-in;
+    right: 0;
+    bottom: -15vh!important;
+    position: sticky;
+    .phoneandclock{
+      width: 750px!important;
+      height: 660px!important;
+    }
+  }
+  .phoneandclock.end-scroll{
+    width: 900px;
+  }
   .title-block{
     display: flex;
     flex-direction: column;
     margin: 5vh 0;
-    width: 500px!important;
+    width: 400px!important;
     left: 0!important;
     align-self: flex-start!important;
     .ayawa-logo{

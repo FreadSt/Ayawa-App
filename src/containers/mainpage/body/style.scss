@@ -154,14 +154,15 @@
       .movement-boxes{
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-between;
         .move-box{
           text-align: left;
-          width: 200px;
+          width: 210px;
           background: rgba(255, 255, 255, 0.05);
           border-radius: 16px;
           height: 130px;
-          margin: 0px 10px 10px 0px;
           padding: 40px;
+          margin: 10px 0;
           div{
             height: 100%;
             display: flex;
