@@ -4,6 +4,9 @@ import logo from '../../../../assets/images/ayawaLogo.png';
 import scrollbox from "../../../../assets/images/scrolldown.png";
 import appstore from '../../../../assets/images/appstore.png';
 import play from "../../../../assets/images/Android.png";
+import iosbtn from "../../../../assets/images/iosbtn.svg";
+import androidbtn from "../../../../assets/images/androidbtn.svg";
+import devices from "../../../../assets/images/mobdevices.png";
 
 const UpperBlock = () => {
 
@@ -33,6 +36,13 @@ const UpperBlock = () => {
                         AI powered
                         meditation app</h1>
                     <div className={'buttons-group'}>
+                        <button>
+                            <img src={iosbtn} className={'ios-content'}/>
+                        </button>
+                        <button>
+                            <img src={androidbtn} className={'android-content'}/>
+                        </button>
+                        {/*
                         <button className={'app-store'}>
                             <img src={appstore} alt={''}/>
                             <div className={'text-container'}>
@@ -47,6 +57,7 @@ const UpperBlock = () => {
                                 <b>Google Play</b>
                             </div>
                         </button>
+                        */}
                     </div>
 
                     <div className={'scroll-block'}>
@@ -93,7 +104,7 @@ const UpperBlock = () => {
                         </div>
                     </button>
                 </div>
-                <img src={phoneandclock} alt={'phone&clock'} className={'phoneandclock'}/>
+                <img src={devices} alt={'phone&clock'} className={'phoneandclock'}/>
                 <div className={'description'}>
                     <h1 className={'title'}>Elevate your spirituality with the technology</h1>
                     <p className={'upper-des'}>AYAWA is a technology-based meditation app that helps to transit from guided relaxation

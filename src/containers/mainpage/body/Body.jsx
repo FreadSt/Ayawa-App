@@ -3,7 +3,7 @@ import UpperBlock from "./upperSection/UpperBlock";
 import check from "../../../assets/images/checkimg.png";
 import analyse from "../../../assets/images/analyse.png";
 import improve from "../../../assets/images/improve.png";
-import iphone from "../../../assets/images/iphonenew.png";
+import iphone from "../../../assets/images/iphone.png";
 import hrv from "../../../assets/images/Activity2.png";
 import repeat from "../../../assets/images/Repeate1.png";
 import activity from "../../../assets/images/Chart.png";
