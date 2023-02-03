@@ -113,6 +113,7 @@
           width: 500px;
           letter-spacing: 1px;
           line-height: 53px;
+          margin: 10px 0 30px;
         }
         p{
           color: #ffffff;
@@ -288,7 +289,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 10vh 0;
+    margin: 0vh 0;
     font-family: GothamRoundedLight;
     width: 750px;
     .alert{
@@ -376,7 +377,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom:10vh ;
+    margin:5vh 0;
     position: relative;
     video{
       border-radius: 16px;

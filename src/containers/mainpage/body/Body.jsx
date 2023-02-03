@@ -168,9 +168,7 @@ const Body = () => {
                     </div>
                     <div className={'movement-block'}>
                         <h1 className={'move-title'}>Movement tracker</h1>
-                        <p>During the meditation, the goal is to focus the mind
-                            and bring it to a state of stillness and calm.
-                            That is why it is important to track the movement...</p>
+                        <p>During the meditation, the goal is to focus the mind and bring it to a state of stillness and calm. Monitor your movements to enhance the effectiveness of your meditation sessions.</p>
                         <div className={'movement-boxes'}>
                             {
                                 [
@@ -235,9 +233,7 @@ const Body = () => {
 
                 <div className={'movement-block'}>
                     <h1 className={'move-title'}>Movement tracker</h1>
-                    <p>During the meditation, the goal is to focus the mind
-                        and bring it to a state of stillness and calm.
-                        That is why it is important to track the movement...</p>
+                    <p>During the meditation, the goal is to focus the mind and bring it to a state of stillness and calm. Monitor your movements to enhance the effectiveness of your meditation sessions.</p>
                     <div className={'movement-boxes'}>
                         {
                             [

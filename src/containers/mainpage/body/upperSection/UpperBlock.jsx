@@ -33,9 +33,11 @@ const UpperBlock = () => {
                     <button className={'open-alpha'}>
                         <span>OPEN ALPHA</span>
                     </button>
-                    <h1 className={'main-title'}>The first
-                        AI powered
-                        meditation app</h1>
+                    <div className={"title"}>
+                        <h1 className={'main-title'}>The first</h1>
+                        <h1 className={'main-title'}>AI powered</h1>
+                        <h1 className={'main-title'}>meditation app</h1>
+                    </div>
                     <div className={'buttons-group'}>
                         <button className={'ios-btn'}>
                             <img src={iosbtn} className={'ios-content'}/>
