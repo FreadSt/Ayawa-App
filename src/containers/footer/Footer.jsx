@@ -21,9 +21,11 @@ const Footer = () => {
                         <img src={appstore}/>
                         <div className={'appstore-des'}>
                             <span>Download on the</span>
+                    
                             <p>App Store</p>
                         </div>
                     </div>
+
                     <a href={"https://instagram.com/ayawameditation?igshid=YmMyMTA2M2Y="}>
                         <div className={'inst'}>
                             <img src={inst}/>
