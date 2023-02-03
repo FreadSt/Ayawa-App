@@ -123,7 +123,7 @@ const Body = () => {
             </div>
             <div className={'hrv-tracker'}>
                     <ParallaxProvider>
-                        <Parallax translateY={[0, 20]}>
+                        <Parallax translateY={[-14, 17]}>
                             <div className={'ref'} ref={ref}>
                                 <img alt={'phone'} src={iphone} className={'iphone'}/>
                             </div>
@@ -131,38 +131,40 @@ const Body = () => {
                     </ParallaxProvider>
                 {/*<img alt={'phone'} src={iphone} className={'iphone layer1'}/>*/}
                 <div className={'hrv-des'}>
-                    <h1>HRV Tracker</h1>
-                    <p>
-                        HRV (Heart Rate Variability) is a measure of the variation in time
-                        between consecutive heart beats, and is often used as an indicator of the
-                        balance between the sympathetic and parasympathetic nervous systems,
-                        overall health and well-being, as a marker of stress to relaxation ratio.
-                    </p>
-                    <p>
-                        By monitoring HRV during meditation, you can gain insights on how your body is responding to
-                        meditation practice and make proper adjustments.
-                    </p>
-                    <div className={'hrv-blocks'}>
-                        {
-                            [
-                                {img: blockicons[0], des: "Track HRV change over time to see if the practice is having a positive impact on your overall well-being", id:1},
-                                {img: blockicons[1], des: "Identify HRV patterns corresponding to stages of the session (e.g. Release to Relax stage transition)", id:2},
-                                {img: blockicons[2], des: "Monitor sessions reports and explore the effectiveness of different types of meditation techniques", id:3}
-                            ].map((item, index) => {
-                                return(
-                                    <div className={'hrv-block-wrapper'} key={index}>
-                                        <div className={'img-box'}>
-                                            <img src={item.img} alt={''}/>
-                                        </div>
-                                        <div className={'des-box'}>
-                                            <div className={'inner-box'}>
-                                                <p>{item.des}</p>
+                    <div className={'upper-des'}>
+                        <h1 className={'hrv-title'}>Heart Rate Variability Tracker</h1>
+                        <p>
+                            HRV (Heart Rate Variability) is a measure of the variation in time
+                            between consecutive heart beats, and is often used as an indicator of the
+                            balance between the sympathetic and parasympathetic nervous systems,
+                            overall health and well-being, as a marker of stress to relaxation ratio.
+                        </p>
+                        <p>
+                            By monitoring HRV during meditation, you can gain insights on how your body is responding to
+                            meditation practice and make proper adjustments.
+                        </p>
+                        <div className={'hrv-blocks'}>
+                            {
+                                [
+                                    {img: blockicons[0], des: "Track HRV change over time to see if the practice is having a positive impact on your overall well-being", id:1},
+                                    {img: blockicons[1], des: "Identify HRV patterns corresponding to stages of the session (e.g. Release to Relax stage transition)", id:2},
+                                    {img: blockicons[2], des: "Monitor sessions reports and explore the effectiveness of different types of meditation techniques", id:3}
+                                ].map((item, index) => {
+                                    return(
+                                        <div className={'hrv-block-wrapper'} key={index}>
+                                            <div className={'img-box'}>
+                                                <img src={item.img} alt={''}/>
+                                            </div>
+                                            <div className={'des-box'}>
+                                                <div className={'inner-box'}>
+                                                    <p>{item.des}</p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                )
-                            })
-                        }
+                                    )
+                                })
+                            }
+                        </div>
                     </div>
                     <div className={'movement-block'}>
                         <h1 className={'move-title'}>Movement tracker</h1>
@@ -174,8 +176,9 @@ const Body = () => {
                                 [
                                     {title:"Reduce distractions", description:"Limit the potential for physical distractions, such as discomfort or itchiness"},
                                     {title:"Increase the focus", description:"Focus on your internal experience and awareness and deepen your practice"},
-                                    {title:"Boost the mindfulness", description:"That will improve breathing and allow you to relax and focus easier."},
-                                    {title:"Reduce distractions", description:"By staying still you can focus on the present and increase mindfulness"},
+                                    {title:"Maintain the posture", description:"That will improve breathing and allow you to relax and focus easier."},
+                                    {title:"Boost the mindfulness", description:"By staying still you can focus on the present and increase mindfulness"},
+
                                 ].map((item, index) => {
                                     return(
                                         <div className={'move-box'} key={index}>

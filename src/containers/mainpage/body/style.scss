@@ -31,7 +31,6 @@
         .des-box{
           background: rgba(255, 255, 255, 0.05);
           text-align: left;
-          font-family: GothamRoundedLight;
           width: 400px;
           height: 144px;
           margin-top: -5px;
@@ -44,11 +43,13 @@
           h1{
             color: #ffffff;
             align-self: flex-start;
+            font-family: GothamRoundedLight;
             margin: 10px 0;
           }
           p{
             margin: 0;
             color: #ffffff;
+            font-family: GothamRoundedBook;
             opacity: 0.5;
           }
         }
@@ -97,44 +98,60 @@
     .hrv-des{
       align-self: flex-end!important;
       overflow-y: hidden;
-      font-family: GothamRoundedLight;
       text-align: left;
       width: 600px;
       right: 0;
       position: relative;
       overflow-y: hidden;
-      h1{
-        color: #ffffff;
-        font-weight: 300;
-        font-size: 48px;
-      }
-      p{
-        color: #ffffff;
-        opacity: 0.5;
-        font-size: 16px;
-        letter-spacing: 1px;
-        font-weight: 300;
-        font-family: GothamRoundedLight;
-        line-height: 24px;
-      }
-      .hrv-blocks{
-        margin: 40px 0;
-        display: flex;
-        justify-content: space-between;
-        .hrv-block-wrapper{
-          width: 180px;
-          .img-box{
-            img{
-              width: 30px;
-              height: 30px;
+      .upper-des{
+        margin-bottom: 10vh;
+        .hrv-title{
+          font-family: GothamRoundedLight;
+          color: #ffffff;
+          font-weight: 300;
+          font-size: 48px;
+          width: 500px;
+          letter-spacing: 1px;
+          line-height: 53px;
+        }
+        p{
+          color: #ffffff;
+          opacity: 0.5;
+          font-size: 16px;
+          letter-spacing: 1px;
+          font-weight: 300;
+          font-family: GothamRoundedBook;
+          line-height: 24px;
+        }
+        .hrv-blocks{
+          margin: 40px 0;
+          display: flex;
+          justify-content: space-between;
+          align-items: baseline;
+          .hrv-block-wrapper{
+            width: 180px;
+            height: 180px;
+            .img-box{
+              img{
+                width: 30px;
+                height: 30px;
+              }
+            }
+            .des-box{
+              .inner-box{
+                p{
+                  font-family: GothamRoundedBook;
+                }
+              }
             }
           }
         }
       }
-    }
+      }
     .movement-block{
       display: flex;
       flex-direction: column;
+      margin-top: 15vh;
       bottom: 12vh;
       right: 0;
       width: 600px;
@@ -146,7 +163,7 @@
         font-weight: 300;
       }
       p{
-        font-family: GothamRoundedLight;
+        font-family: GothamRoundedBook;
         color: #ffffff;
         font-size: 16px;
         font-weight: 300;
@@ -172,13 +189,14 @@
             h1{
               margin: 0;
               font-size: 24px;
-              font-family: GothamRoundedLight;
+              font-family: GothamRoundedBook;
               color: #ffffff;
             }
             p{
               font-size: 14px;
-              font-family: GothamRoundedLight;
-              color: #ffffff;line-height: 24px;
+              font-family: GothamRoundedBook;
+              color: #ffffff;
+              line-height: 24px;
             }
           }
         }
@@ -336,11 +354,13 @@
     h1{
       font-size: 48px;
       font-weight: 300;
+      font-family: GothamRoundedLight;
       color: #ffffff;
       opacity: 0.5;
     }
     p{
       color: #ffffff;
+      font-family: GothamRoundedBook;
       font-weight:lighter;
       letter-spacing: 1px;
       font-size: 16px;

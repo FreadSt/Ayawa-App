@@ -86,7 +86,7 @@
       border-radius: 8px;
       border: none;
       span{
-        font-family: 'GothamRoundedRegular';
+        font-family: 'GothamRoundedBook';
         font-weight: 300;
         font-size: 12px;
         color: #ffffff;
@@ -162,7 +162,7 @@
         margin-right: 10px;
       }
       span{
-        font-family: GothamRoundedRegular;
+        font-family: GothamRoundedBook;
         color: #ffffff;
         opacity: 0.1;
         font-size: 12px;
@@ -181,7 +181,7 @@
         margin: 5vh 0;
       }
       p{
-        font-family: GothamRoundedLight;
+        font-family: GothamRoundedBook;
         color: #ffffff;
         line-height: 24px;
         opacity: 0.5;
@@ -289,6 +289,7 @@
           font-weight: 300;
           font-size: 24px;
           margin: 30px 0;
+          font-family: GothamRoundedLight;
         }
         p{
           font-size: 14px;
