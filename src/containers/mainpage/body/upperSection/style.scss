@@ -55,11 +55,12 @@
 
   }
   .phoneandclock{
-    width: 815px;
-    height: 667px;
+    width: 75vh;
+    height: 60vh;
     padding: 0;
     position: sticky;
     top: 10vh;
+    margin-left: 3vh;
   }
   .end-scroll{
     top: 10vh;
@@ -99,6 +100,9 @@
       font-size: 54px;
       color: #ffffff;
       margin: 7vh 0;
+      width: 400px;
+      letter-spacing: -0.5px;
+      line-height: 59px;
     }
     .buttons-group{
       display: flex;
