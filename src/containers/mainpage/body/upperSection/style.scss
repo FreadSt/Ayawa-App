@@ -337,10 +337,13 @@ only screen and (-o-min-device-pixel-ratio: 2/1),
 only screen and (-webkit-min-device-pixel-ratio: 2),
 
 only screen and (min-device-pixel-ratio: 2) {
-
-  .phoneandclock {
-    width: 615px;
-    height: 460px;
+  .upper-wrapper{
+    .web-layout{
+      .phoneandclock {
+        width: 615px;
+        height: 460px;
+      }
+    }
   }
 
 }
