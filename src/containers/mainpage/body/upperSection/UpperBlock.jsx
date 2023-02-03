@@ -7,6 +7,7 @@ import play from "../../../../assets/images/Android.png";
 import iosbtn from "../../../../assets/images/iosbtn.svg";
 import androidbtn from "../../../../assets/images/androidbtn.svg";
 import devices from "../../../../assets/images/mobdevices.png";
+import webdevices from "../../../../assets/images/webdevices.png";
 
 const UpperBlock = () => {
 
@@ -36,10 +37,10 @@ const UpperBlock = () => {
                         AI powered
                         meditation app</h1>
                     <div className={'buttons-group'}>
-                        <button>
+                        <button className={'ios-btn'}>
                             <img src={iosbtn} className={'ios-content'}/>
                         </button>
-                        <button>
+                        <button className={'android-btn'}>
                             <img src={androidbtn} className={'android-content'}/>
                         </button>
                         {/*
@@ -76,7 +77,7 @@ const UpperBlock = () => {
                             of each session.</p>
                     </div>
                 </div>
-                <img src={phoneandclock} alt={'phone&clock'} className={'phoneandclock'}/>
+                <img src={webdevices} alt={'phone&clock'} className={'phoneandclock'}/>
             </div>
 
             <div className={'mobile-container'}>
@@ -89,19 +90,11 @@ const UpperBlock = () => {
                     meditation app
                 </h1>
                 <div className={'buttons-group'}>
-                    <button className={'app-store'}>
-                        <img src={appstore} alt={''}/>
-                        <div className={'text-container'}>
-                            <span className={'upper-span'}>Download on the</span>
-                            <b>App Store</b>
-                        </div>
+                    <button>
+                        <img src={iosbtn} className={'ios-content'}/>
                     </button>
                     <button>
-                        <img src={play} className={'gplay'} alt={''}/>
-                        <div className={'text-container'}>
-                            <span className={'upper-span'}>COOMING SOON TO</span>
-                            <b>Google Play</b>
-                        </div>
+                        <img src={androidbtn} className={'android-content'}/>
                     </button>
                 </div>
                 <img src={devices} alt={'phone&clock'} className={'phoneandclock'}/>

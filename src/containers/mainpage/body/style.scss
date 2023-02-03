@@ -221,6 +221,11 @@
       }
       .promo-btns{
         display: flex;
+        .disabled{
+          cursor: default;
+        }
+        .ios-btn{
+        }
         button{
           display: flex;
           align-items: center;
@@ -255,12 +260,7 @@
             width: 29px;
             height: 16px;
           }
-        }:hover{
-           opacity: 1;
-           span{
-             opacity: 0.5;
-           }
-         }
+        }
       }
     }
   }

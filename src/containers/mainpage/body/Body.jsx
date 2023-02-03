@@ -9,8 +9,6 @@ import repeat from "../../../assets/images/Repeate1.png";
 import activity from "../../../assets/images/Chart.png";
 import emailjs from '@emailjs/browser';
 import {useEffect, useRef, useState} from "react";
-import appstore from "../../../assets/images/appstore.png";
-import android from "../../../assets/images/Android.png";
 import videoBG from '../../../assets/images/background.mp4';
 import advancedaiimg from "../../../assets/images/advandecai.png";
 import rightarrow from "../../../assets/images/rightarrow.png";
@@ -19,6 +17,8 @@ import { fadeInDownBig } from 'react-animations';
 import danger from "../../../assets/images/dangertriangle.png";
 import complete from "../../../assets/images/complete.png";
 import {Parallax, ParallaxProvider, useParallax} from "react-scroll-parallax";
+import iosbtn from "../../../assets/images/iosbtn.svg";
+import androidbtn from "../../../assets/images/androidbtn.svg";
 
 const cardsImg = [check, analyse, improve];
 const blockicons = [hrv, repeat, activity];
@@ -123,7 +123,7 @@ const Body = () => {
             </div>
             <div className={'hrv-tracker'}>
                     <ParallaxProvider>
-                        <Parallax translateY={[0, 27]}>
+                        <Parallax translateY={[0, 21]}>
                             <div className={'ref'} ref={ref}>
                                 <img alt={'phone'} src={iphone} className={'iphone'}/>
                             </div>
@@ -260,19 +260,11 @@ const Body = () => {
                     <h1 className={'promo-title'}>First 500 registered users
                         will get the app for free forever!</h1>
                     <div className={'promo-btns'}>
-                        <button>
-                            <img alt={""} src={appstore} className={'appstore'}/>
-                            <div className={'button-des'}>
-                                <span>Download on the</span>
-                                <p>App Store</p>
-                            </div>
+                        <button className={'ios-btn'}>
+                            <img src={iosbtn} className={'ios-content'}/>
                         </button>
-                        <button>
-                            <img src={android} alt={''} className={'android'}/>
-                            <div className={'button-des'}>
-                                <span>COOMING SOON TO</span>
-                                <p>Google Play</p>
-                            </div>
+                        <button disabled className={'disabled'}>
+                            <img src={androidbtn} className={'android-content'}/>
                         </button>
                     </div>
                 </div>
