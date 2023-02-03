@@ -396,6 +396,7 @@
         font-weight: 300;
         color: #ffffff;
         margin: 0;
+        font-family: GothamRoundedLight;
       }
       span{
         color: #ffffff;
@@ -403,6 +404,7 @@
         letter-spacing: 1px;
         font-size: 16px;
         opacity: 0.5;
+        font-family: GothamRoundedBook;
       }
       .join-input{
         display: flex;
@@ -424,6 +426,7 @@
         input::placeholder{
           color: #FFFFFF;
           opacity: 0.5;
+          font-family: GothamRoundedBook;
         }
         button{
           width: 65px;
@@ -492,11 +495,12 @@
         color: #FFFFFF;
         opacity: 0.7;
         font-size: 24px;
-        width: 150px;
+        width: 250px;
       }
       p{
         color: #FFFFFF;
         opacity: 0.5;
+        line-height: 21px;
       }
       .hrv-blocks{
         display: flex;
