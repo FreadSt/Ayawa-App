@@ -247,7 +247,9 @@
           border-radius: 16px;
           border: none;
           margin-right: 10px;
-
+          img{
+            width: 95%;
+          }
           .gplay{
             width: 27px;
             height: 13px;
@@ -275,7 +277,8 @@
       .phoneandclock{
         width: 315px;
         height: 290px;
-        margin-top: 5vh;
+        margin: -5vh 0 5vh;
+        position: relative;
       }
       .description{
         width: 315px;
