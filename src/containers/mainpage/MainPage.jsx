@@ -2,7 +2,7 @@ import Body from "./body/Body";
 
 const MainPage = () => {
     return(
-        <div>
+        <div style={{display:"flex", justifyConteng:"center"}}>
             <Body/>
         </div>
     )

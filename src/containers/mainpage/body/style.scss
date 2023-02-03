@@ -115,6 +115,7 @@
         letter-spacing: 1px;
         font-weight: 300;
         font-family: GothamRoundedLight;
+        line-height: 24px;
       }
       .hrv-blocks{
         margin: 40px 0;
@@ -175,9 +176,9 @@
               color: #ffffff;
             }
             p{
-              font-size: 16px;
+              font-size: 14px;
               font-family: GothamRoundedLight;
-              color: #ffffff;
+              color: #ffffff;line-height: 24px;
             }
           }
         }
@@ -531,6 +532,9 @@
             width: 130px;
             height: 65px;
             padding: 20px;
+            img{
+              width: 95%;
+            }
             .appstore{
               width: 17px;
               height: 21px;
