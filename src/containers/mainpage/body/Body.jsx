@@ -123,7 +123,7 @@ const Body = () => {
             </div>
             <div className={'hrv-tracker'}>
                     <ParallaxProvider>
-                        <Parallax translateY={[0, 21]}>
+                        <Parallax translateY={[0, 20]}>
                             <div className={'ref'} ref={ref}>
                                 <img alt={'phone'} src={iphone} className={'iphone'}/>
                             </div>
