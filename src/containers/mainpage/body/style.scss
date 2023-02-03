@@ -117,7 +117,7 @@
         }
         p{
           color: #ffffff;
-          opacity: 0.5;
+          opacity: 0.7;
           font-size: 16px;
           letter-spacing: 1px;
           font-weight: 300;
@@ -142,6 +142,7 @@
               .inner-box{
                 p{
                   font-family: GothamRoundedBook;
+                  opacity: 0.7!important;
                 }
               }
             }
@@ -168,7 +169,8 @@
         color: #ffffff;
         font-size: 16px;
         font-weight: 300;
-        opacity: 0.5;
+        opacity: 0.7;
+        line-height: 24px;
       }
       .movement-boxes{
         display: flex;
@@ -197,7 +199,8 @@
               font-size: 14px;
               font-family: GothamRoundedBook;
               color: #ffffff;
-              line-height: 24px;
+              line-height: 24px!important;
+              opacity: 0.7;
             }
           }
         }
@@ -317,7 +320,7 @@
           letter-spacing: 0.5px;
           font-weight: 300;
           color: #FFFFFF!important;
-          opacity: 0.7;
+          opacity: 0.4;
         }
         img{
           align-self: center;
@@ -357,7 +360,7 @@
       font-weight: 300;
       font-family: GothamRoundedLight;
       color: #ffffff;
-      opacity: 0.5;
+      opacity: 0.4;
     }
     p{
       color: #ffffff;
@@ -365,7 +368,7 @@
       font-weight:lighter;
       letter-spacing: 1px;
       font-size: 16px;
-      opacity: 0.5;
+      opacity: 0.4;
       line-height: 24px;
     }
   }
@@ -402,9 +405,8 @@
       span{
         color: #ffffff;
         font-weight:lighter;
-        letter-spacing: 1px;
         font-size: 16px;
-        opacity: 0.5;
+        opacity: 0.4;
         font-family: GothamRoundedBook;
       }
       .join-input{

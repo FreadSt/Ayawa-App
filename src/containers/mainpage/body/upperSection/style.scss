@@ -79,6 +79,7 @@
     .ayawa-logo{
       width: 170px;
       margin-bottom: 6em;
+      letter-spacing: -2%;
     }
     .open-alpha{
       width: 114px;
@@ -102,28 +103,28 @@
         font-size: 54px;
         color: #ffffff;
         margin: 0;
-        width: 400px;
-        letter-spacing: -0.5px;
         line-height: 59px;
+        letter-spacing: -1px;
       }
     }
     .buttons-group{
       display: flex;
       align-items: center;
+      justify-content: space-between;
       width: 100%;
       .android-btn{
         cursor: default;
+        margin-left: 10px;
       }
       button{
         align-items: center;
         padding: 20px 20px;
         display: flex;
-        width: 180px;
+        width: 197px;
         height: 75px;
         background: rgba(255, 255, 255, 0.1);
         border-radius: 16px;
         border: none;
-        margin-right: 10px;
         cursor: pointer;
         .android-content{
           
@@ -165,14 +166,15 @@
       .scroll{
         width: 18px;
         height: 18px;
-        opacity: 0.3;
+        opacity: 0.4;
         margin-right: 10px;
       }
       span{
         font-family: GothamRoundedBook;
         color: #ffffff;
-        opacity: 0.1;
+        opacity: 0.4;
         font-size: 12px;
+        letter-spacing: 0.1em;
       }
     }
     .description{
@@ -326,4 +328,19 @@
       }
     }
   }
+}
+
+@media only screen and (min--moz-device-pixel-ratio: 2),
+
+only screen and (-o-min-device-pixel-ratio: 2/1),
+
+only screen and (-webkit-min-device-pixel-ratio: 2),
+
+only screen and (min-device-pixel-ratio: 2) {
+
+  .phoneandclock {
+    width: 615px;
+    height: 460px;
+  }
+
 }
