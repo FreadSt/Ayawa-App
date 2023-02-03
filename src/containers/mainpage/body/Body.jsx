@@ -176,7 +176,7 @@ const Body = () => {
                                 [
                                     {title:"Reduce distractions", description:"Limit the potential for physical distractions, such as discomfort or itchiness"},
                                     {title:"Increase the focus", description:"Focus on your internal experience and awareness and deepen your practice"},
-                                    {title:"Maintain the posture", description:"That will improve breathing and allow you to relax and focus easier."},
+                                    {title:"Maintain the posture", description:"That will improve breathing and allow you to relax and focus easier."},
                                     {title:"Boost the mindfulness", description:"By staying still you can focus on the present and increase mindfulness"},
 
                                 ].map((item, index) => {
@@ -243,8 +243,8 @@ const Body = () => {
                             [
                                 {title:"Reduce distractions", description:"Limit the potential for physical distractions, such as discomfort or itchiness"},
                                 {title:"Increase the focus", description:"Focus on your internal experience and awareness and deepen your practice"},
-                                {title:"Boost the mindfulness", description:"That will improve breathing and allow you to relax and focus easier."},
-                                {title:"Reduce distractions", description:"By staying still you can focus on the present and increase mindfulness"},
+                                {title:"Maintain the posture", description:"That will improve breathing and allow you to relax and focus easier."},
+                                {title:"Boost the mindfulness", description:"By staying still you can focus on the present and increase mindfulness"},
                             ].map((item, index) => {
                                 return(
                                     <div className={'move-box'} key={index}>
