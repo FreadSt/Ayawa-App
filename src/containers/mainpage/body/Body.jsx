@@ -17,7 +17,7 @@ import { fadeInDownBig } from 'react-animations';
 import danger from "../../../assets/images/dangertriangle.png";
 import complete from "../../../assets/images/complete.png";
 import {Parallax, ParallaxProvider, useParallax} from "react-scroll-parallax";
-import iosbtn from "../../../assets/images/iosbtn.svg";
+import iosbtn from "../../../assets/images/appstore.svg";
 import androidbtn from "../../../assets/images/androidbtn.svg";
 
 const cardsImg = [check, analyse, improve];
@@ -34,9 +34,9 @@ const Body = () => {
     const [isCorrectEmail, setIsCorrectEmail] = useState(false)
     const [isVivibleAlert, setIsVisibleAlert] = useState(false)
     const [isSubmit, setIsSubmit] = useState(false)
-    const form = useRef()
+    const [isVisible, setIsVisible] = useState("undefined");
 
-    const { ref } = useParallax<HTMLDivElement>({ speed: -22220 });
+    const form = useRef()
 
     const sendEmail = (e) => {
         e.preventDefault();
@@ -53,6 +53,7 @@ const Body = () => {
                 },
                 (error) => {
                     console.log(error.text);
+
                 }
             );
         setIsSubmit(true)
@@ -78,6 +79,9 @@ const Body = () => {
     const handleChangeEmail = (event) => {
         setEmail({value: event.target.value, error: ""})
     }
+    console.log(!isCorrectEmail, "asdasee")
+    console.log(email, "asdasee")
+
     /*
     const showBtn = window.addEventListener('scroll', () => {
         const scrollToTop = document.querySelector('.iphone');
@@ -92,6 +96,27 @@ const Body = () => {
             scrollToTop.classList.remove('end-scroll')
         }
     });
+
+
+
+    PARRALAXLOGIC
+    useEffect(() => {
+        window.addEventListener("scroll", listenToScroll);
+        return () => {
+            window.removeEventListener("scroll", listenToScroll)
+        }
+    }, [isVisible])
+
+    const listenToScroll = () => {
+        let heightToShowFrom = 2400;
+        const winScroll = document.body.scrollTop ||
+            document.documentElement.scrollTop;
+        if (winScroll > heightToShowFrom) {
+            isVisible === "undefined" && setIsVisible(false);
+            console.log(isVisible, "visible")
+        }
+        console.log(winScroll, "scroll")
+    };
     */
     return(
         <div className={'body-wrapper'}>
@@ -122,13 +147,19 @@ const Body = () => {
                 </div>
             </div>
             <div className={'hrv-tracker'}>
+                {isVisible?
                     <ParallaxProvider>
-                        <Parallax translateY={[-1, 34]}>
-                            <div className={'ref'} ref={ref}>
+                        <Parallax translateY={[0, 17]}
+                                  speed={100}
+                                  startScroll={2400}
+                        >
+                            <div className={'ref'}>
                                 <img alt={'phone'} src={iphone} className={'iphone'}/>
                             </div>
                         </Parallax>
-                    </ParallaxProvider>
+                    </ParallaxProvider> :
+                    <img alt={'phone'} src={iphone} className={'iphone-static'}/>
+                }
                 {/*<img alt={'phone'} src={iphone} className={'iphone layer1'}/>*/}
                 <div className={'hrv-des'}>
                     <div className={'upper-des'}>
@@ -277,7 +308,7 @@ const Body = () => {
                 <h1>Advanced AI coming soon</h1>
                 <p>AI is currently at the learning stage and You can help us to speed this process up by simply using AYAWA app.
                     Hopefully we’ll be able to release advanced AI features as a part of the closest update.</p>
-                <p>Thank you for your patience and support!</p>
+                <p style={{margin:'0'}}>Thank you for your patience and support!</p>
                 {
                     isSubmit?
                         <div className="alert">
@@ -301,7 +332,7 @@ const Body = () => {
                 <div className={'join-des'}>
                     <h1>Join the Newsletter</h1>
                     <span>Get notified on important news and updates from AYAWA</span>
-                    <div className={'join-input'} ref={form}>
+                    <form className={'join-input'} ref={form}>
                         <input placeholder="Email adress"
                                type={"text"}
                                onChange={handleChangeEmail}
@@ -315,7 +346,7 @@ const Body = () => {
                         >
                             <img src={rightarrow}/>
                         </button>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>

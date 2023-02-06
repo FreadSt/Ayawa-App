@@ -95,6 +95,11 @@
         left: 0;
       }
     }
+    .iphone-static{
+      width: 490px;
+      height: 980px;
+      position: sticky;
+    }
     .hrv-des{
       align-self: flex-end!important;
       overflow-y: hidden;
@@ -104,7 +109,7 @@
       position: relative;
       overflow-y: hidden;
       .upper-des{
-        margin-bottom: 10vh;
+        margin: 5vh 0 10vh;
         .hrv-title{
           font-family: GothamRoundedLight;
           color: #ffffff;

@@ -2,7 +2,7 @@ import './style.scss';
 import phoneandclock from '../../../../assets/images/phoneandclock.png';
 import logo from '../../../../assets/images/ayawaLogo.png';
 import scrollbox from "../../../../assets/images/scrolldown.png";
-import appstore from '../../../../assets/images/appstore.png';
+import appstore from '../../../../assets/images/appstore.svg';
 import play from "../../../../assets/images/Android.png";
 import iosbtn from "../../../../assets/images/iosbtn.svg";
 import androidbtn from "../../../../assets/images/androidbtn.svg";
@@ -40,7 +40,7 @@ const UpperBlock = () => {
                     </div>
                     <div className={'buttons-group'}>
                         <button className={'ios-btn'}>
-                            <img src={iosbtn} className={'ios-content'}/>
+                            <img src={appstore} className={'ios-content'}/>
                         </button>
                         <button className={'android-btn'}>
                             <img src={androidbtn} className={'android-content'}/>
@@ -69,7 +69,11 @@ const UpperBlock = () => {
                     </div>
 
                     <div className={'description'}>
-                        <h1 className={'title'}>Elevate your spirituality with the technology</h1>
+                        <div className={'title-des'}>
+                            <h1 className={'title'}>Elevate your</h1>
+                            <h1 className={'title'}>meditation experience</h1>
+                            <h1 className={'title'}>with Ayawa</h1>
+                        </div>
                         <p className={'upper-des'}>AYAWA is a technology-based meditation app that helps to transit from guided relaxation
                             to true meditation, or / and to enhance
                             sessions quality.</p>
@@ -101,7 +105,7 @@ const UpperBlock = () => {
                 </div>
                 <img src={devices} alt={'phone&clock'} className={'phoneandclock'}/>
                 <div className={'description'}>
-                    <h1 className={'title'}>Elevate your spirituality with the technology</h1>
+                    <h1 className={'title'}>Elevate your meditation experience with Ayawa</h1>
                     <p className={'upper-des'}>AYAWA is a technology-based meditation app that helps to transit from guided relaxation
                         to true meditation, or / and to enhance
                         sessions quality.</p>
