@@ -123,7 +123,7 @@ const Body = () => {
             </div>
             <div className={'hrv-tracker'}>
                     <ParallaxProvider>
-                        <Parallax translateY={[-14, 17]}>
+                        <Parallax translateY={[-1, 34]}>
                             <div className={'ref'} ref={ref}>
                                 <img alt={'phone'} src={iphone} className={'iphone'}/>
                             </div>
@@ -147,7 +147,7 @@ const Body = () => {
                             {
                                 [
                                     {img: blockicons[0], des: "Track HRV change over time to see if the practice is having a positive impact on your overall well-being", id:1},
-                                    {img: blockicons[1], des: "Identify HRV patterns corresponding to stages of the session (e.g. Release to Relax stage transition)", id:2},
+                                    {img: blockicons[1], des: "Identify HRV patterns corresponding to stages of the session", secDes:"(e.g. Release to Relax stage transition)", id:2},
                                     {img: blockicons[2], des: "Monitor sessions reports and explore the effectiveness of different types of meditation techniques", id:3}
                                 ].map((item, index) => {
                                     return(
@@ -157,7 +157,8 @@ const Body = () => {
                                             </div>
                                             <div className={'des-box'}>
                                                 <div className={'inner-box'}>
-                                                    <p>{item.des}</p>
+                                                    <p className={'des'}>{item.des}</p>
+                                                    <p className={'sup-des'}>{item.secDes}</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -209,9 +210,11 @@ const Body = () => {
                 <div className={'hrv-blocks'}>
                     {
                         [
-                            {img: blockicons[0], des: "Track HRV change over time to see if the practice is having a positive impact on your overall well-being"},
-                            {img: blockicons[1], des: "Identify HRV patterns corresponding to stages of the session (e.g. Release to Relax stage transition)"},
-                            {img: blockicons[2], des: "Monitor sessions reports and explore the effectiveness of different types of meditation techniques"}
+                            {img: blockicons[0],
+                                des: "Track HRV change over time to see if the practice is having a positive impact on your overall well-being"},
+                            {img: blockicons[1], des: "Identify HRV patterns corresponding to stages of the session", secDes:"(e.g. Release to Relax stage transition)",},
+                            {img: blockicons[2],
+                                des: "Monitor sessions reports and explore the effectiveness of different types of meditation techniques"}
                         ].map((item, index) => {
                             return(
                                 <div className={'hrv-block-wrapper'} key={index}>
@@ -220,7 +223,8 @@ const Body = () => {
                                     </div>
                                     <div className={'des-box'}>
                                         <div className={'inner-box'}>
-                                            <p>{item.des}</p>
+                                            <p className={'des'}>{item.des}</p>
+                                            <p className={'sup-description'}>{item.secDes}</p>
                                         </div>
                                     </div>
                                 </div>

@@ -50,7 +50,7 @@
             margin: 0;
             color: #ffffff;
             font-family: GothamRoundedBook;
-            opacity: 0.5;
+            opacity: 0.7;
           }
         }
       }
@@ -119,7 +119,6 @@
           color: #ffffff;
           opacity: 0.7;
           font-size: 16px;
-          letter-spacing: 1px;
           font-weight: 300;
           font-family: GothamRoundedBook;
           line-height: 24px;
@@ -140,9 +139,15 @@
             }
             .des-box{
               .inner-box{
-                p{
+                margin: 25px 0 0;
+                .des{
                   font-family: GothamRoundedBook;
                   opacity: 0.7!important;
+                  margin: 0;
+                }
+                .sup-des{
+                  opacity: 0.4;
+                  margin: 0;
                 }
               }
             }
@@ -240,7 +245,7 @@
         font-weight: 300;
         width: 730px;
         margin: 0;
-        letter-spacing: 1px;
+        letter-spacing: -0.02em;
       }
       .promo-btns{
         display: flex;
@@ -295,6 +300,7 @@
     margin: 0vh 0;
     font-family: GothamRoundedLight;
     width: 750px;
+    letter-spacing: -0.02em;
     .alert{
       top: 0;
       margin-top: 5%;
@@ -401,6 +407,7 @@
         color: #ffffff;
         margin: 0;
         font-family: GothamRoundedLight;
+        letter-spacing: -0.02em;
       }
       span{
         color: #ffffff;
@@ -428,7 +435,7 @@
         }
         input::placeholder{
           color: #FFFFFF;
-          opacity: 0.5;
+          opacity: 0.7;
           font-family: GothamRoundedBook;
         }
         button{
@@ -476,10 +483,16 @@
           .des-box{
             width: 315px;
             height: 163px;
-            h1{
-              font-size: 24px;
-              font-weight: 300;
-              opacity: 0.7;
+            .inner-box{
+              h1{
+                font-size: 24px;
+                font-weight: 300;
+              }
+              p{
+                font-size: 14px;
+                line-height: 21px;
+                opacity: 0.7;
+              }
             }
           }
         }
@@ -497,14 +510,13 @@
       h1{
         color: #FFFFFF;
         font-family: GothamRoundedLight;
-        opacity: 0.7;
         font-size: 24px;
         width: 250px;
       }
       p{
         font-family: GothamRoundedBook;
         color: #FFFFFF;
-        opacity: 0.5;
+        opacity: 0.7;
         line-height: 21px;
         font-size: 14px;
       }
@@ -512,13 +524,31 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        margin: 5vh 0;
+        margin: 5vh 0 3vh;
         .hrv-block-wrapper{
-          width: 145px;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
           .img-box{
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
             img{
               width: 24px;
               height: 24px;
+            }
+          }
+          .des-box{
+            .inner-box{
+              width: 144px;
+              margin: 20px 0 0;
+              .des{
+                margin: 0;
+              }
+              .sup-description{
+                margin: 0;
+                opacity: 0.7;
+              }
             }
           }
         }
@@ -528,11 +558,13 @@
         .move-title{
           color: #FFFFFF;
           width: 250px;
+
         }
         p{
           font-size: 14px;
-          line-height: 21px;
+          line-height: 21px!important;
           margin-bottom: 5vh;
+          opacity: 0.7;
         }
         .move-box{
           background: rgba(255, 255, 255, 0.05);
@@ -545,7 +577,6 @@
             font-size: 18px;
             font-family: GothamRoundedLight;
             color: #FFFFFF;
-            opacity: 0.5;
             margin: 0px 0 20px;
           }
           p{
@@ -568,7 +599,6 @@
         h1{
           width: 275px;
           font-size: 32px;
-          opacity: 0.7;
         }
         .promo-btns{
           button{
@@ -613,7 +643,6 @@
       p{
         font-size: 14px;
         width: 315px;
-        letter-spacing: 0;
         line-height: 21px;
       }
       .alert{
@@ -631,7 +660,7 @@
           width: 50%;
         }
         span{
-          width: 315px;
+          width: 275px;
           font-size: 14px;
           line-height: 21px;
           font-family: GothamRoundedBook;
@@ -647,7 +676,7 @@
             font-family: GothamRoundedBook;
             font-size: 14px;
             color: #FFFFFF;
-            opacity: 0.5;
+            opacity: 0.7;
           }
         }
       }

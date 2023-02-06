@@ -104,9 +104,8 @@
       flex-direction: column;
       text-align: left;
       span{
-        color: #ffffff;
-        opacity: 0.5;
         font-size: 12px;
+        color: rgba(255, 255, 255, 0.3);
       }
     }
     .privacy-docs{
@@ -146,6 +145,10 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin: 3vh 0;
+        .footer-logo{
+          margin: 1vh 0;
+        }
       }
     }
     .privacy{
@@ -161,9 +164,8 @@
         flex-direction: column;
         text-align: center;
         span{
-          color: #ffffff;
-          opacity: 0.5;
           font-size: 12px;
+          color: rgba(255, 255, 255, 0.3);
         }
       }
       .privacy-docs{
