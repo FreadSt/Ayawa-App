@@ -487,6 +487,7 @@
               h1{
                 font-size: 24px;
                 font-weight: 300;
+                letter-spacing: -0.02em;
               }
               p{
                 font-size: 14px;
@@ -511,7 +512,9 @@
         color: #FFFFFF;
         font-family: GothamRoundedLight;
         font-size: 24px;
-        width: 250px;
+        width: 220px;
+        letter-spacing: -0.02em;
+        line-height: 31px;
       }
       p{
         font-family: GothamRoundedBook;
@@ -577,6 +580,7 @@
             font-size: 18px;
             font-family: GothamRoundedLight;
             color: #FFFFFF;
+            letter-spacing: -0.02em;
             margin: 0px 0 20px;
           }
           p{
@@ -597,10 +601,13 @@
         height: 335px;
         justify-content: space-around;
         h1{
+          margin-top: 2vh;
           width: 275px;
+          letter-spacing: -0.02em;
           font-size: 32px;
         }
         .promo-btns{
+          margin-bottom: 3vh;
           button{
             width: 130px;
             height: 65px;
@@ -639,6 +646,7 @@
       h1{
         width: 315px;
         font-size: 32px;
+        letter-spacing: -0.02em;
       }
       p{
         font-size: 14px;
@@ -658,6 +666,7 @@
         h1{
           font-size: 32px;
           width: 50%;
+          letter-spacing: -0.02em;
         }
         span{
           width: 275px;
