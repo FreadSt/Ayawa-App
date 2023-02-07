@@ -2,8 +2,8 @@ import logo from "../../assets/images/ayawaLogo.png";
 import inst from '../../assets/images/instagram.png';
 import twitter from "../../assets/images/twitter.png";
 import appstore from "../../assets/images/appstore.png";
-import policy from "../../assets/AyawaPrivacyPolciy.pdf";
-import terms from "../../assets/AyawaTermsandConditions.pdf";
+import terms from "../../assets/TermsandConditions.pdf";
+import policy from "../../assets/PrivacyPolicy.pdf";
 import ua from "../../assets/images/ua.png";
 import './style.scss';
 
@@ -50,7 +50,7 @@ const Footer = () => {
                         target="_blank"
                        rel="noreferrer"
                     >Privacy Policy</a>
-                    <a href={policy}
+                    <a href={terms}
                         target="_blank"
                        rel="noreferrer"
                     >Terms and Conditions</a>

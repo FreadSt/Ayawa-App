@@ -13,7 +13,7 @@ import videoBG from '../../../assets/images/background.mp4';
 import advancedaiimg from "../../../assets/images/advandecai.png";
 import rightarrow from "../../../assets/images/rightarrow.png";
 import styled, { keyframes } from 'styled-components';
-import { fadeInDownBig } from 'react-animations';
+import { fadeInDownBig, fadeInUpBig } from 'react-animations';
 import danger from "../../../assets/images/dangertriangle.png";
 import complete from "../../../assets/images/complete.png";
 import {Parallax, ParallaxProvider, useParallax} from "react-scroll-parallax";
@@ -23,24 +23,25 @@ import androidbtn from "../../../assets/images/androidbtn.svg";
 const cardsImg = [check, analyse, improve];
 const blockicons = [hrv, repeat, activity];
 const fadeAnimation = keyframes`${fadeInDownBig}`;
-
+const fadeMobAnimation = keyframes`${fadeInUpBig}`;
 
 const FadeDiv = styled.div`
   animation: 1s ${fadeAnimation};
 `;
+const FadeMobDiv = styled.div`
+  animation: 1s ${fadeMobAnimation};
+`;
 
 const Body = () => {
     const [email, setEmail] = useState({value:"", error:""})
-    const [isCorrectEmail, setIsCorrectEmail] = useState(false)
-    const [isVivibleAlert, setIsVisibleAlert] = useState(false)
+    const [isCorrectEmail, setIsCorrectEmail] = useState(true)
     const [isSubmit, setIsSubmit] = useState(false)
     const [isVisible, setIsVisible] = useState("undefined");
+    const [isFilled, setIsFilled] = useState(false)
 
     const form = useRef()
-
     const sendEmail = (e) => {
         e.preventDefault();
-        setIsVisibleAlert(true)
         emailjs.sendForm(
             "service_pj1dmxh",
             "template_rm1fiqk",
@@ -57,9 +58,6 @@ const Body = () => {
                 }
             );
         setIsSubmit(true)
-        setTimeout(() => {
-            setIsVisibleAlert(false)
-        }, 2000)
     };
 
     useEffect(() => {
@@ -78,9 +76,21 @@ const Body = () => {
     }
     const handleChangeEmail = (event) => {
         setEmail({value: event.target.value, error: ""})
+        setIsFilled(true)
     }
-    console.log(!isCorrectEmail, "asdasee")
-    console.log(email, "asdasee")
+    /* {
+                            isCorrectEmail?
+                                <button
+                                    onClick={sendEmail}
+                                >
+                                    <img src={rightarrow}/>
+                                </button>
+                                :<button
+                                disabled
+                                >
+                                    <img src={rightarrow}/>
+                                </button>
+                        }*/
 
     /*
     const showBtn = window.addEventListener('scroll', () => {
@@ -96,8 +106,6 @@ const Body = () => {
             scrollToTop.classList.remove('end-scroll')
         }
     });
-
-
 
     PARRALAXLOGIC
     useEffect(() => {
@@ -309,46 +317,73 @@ const Body = () => {
                 <p>AI is currently at the learning stage and You can help us to speed this process up by simply using AYAWA app.
                     Hopefully we’ll be able to release advanced AI features as a part of the closest update.</p>
                 <p style={{margin:'0'}}>Thank you for your patience and support!</p>
-                {
-                    isSubmit?
-                        <div className="alert">
-                            {isCorrectEmail ?
-                                <FadeDiv>
-                                    <img src={complete}/>
-                                    <span className="succsess-text">You've successfully subscribed</span>
-                                </FadeDiv>
-                                :
-                                <div className="error">
-                                    <img src={danger}/>
-                                    <span className="err-text">Something went wrong... Please try again.</span>
-                                </div>
-                            }
-                        </div>
-                        : null
-                }
             </div>
             <div className={'join'}>
                 <video src={videoBG} loop muted autoPlay/>
                 <div className={'join-des'}>
                     <h1>Join the Newsletter</h1>
                     <span>Get notified on important news and updates from AYAWA</span>
-                    <form className={'join-input'} ref={form}>
+                    <form className={'join-input'} ref={form} onSubmit={handleSubmit}>
                         <input placeholder="Email adress"
                                type={"text"}
                                onChange={handleChangeEmail}
                                value={email.value}
                                name="user_email"
-                        />{email.error ?
-                        <span>"Oops, the Email seems to be misspelled or invalid... Please check and try again."</span>
-                        : null}
-                        <button
-                            onClick={sendEmail}
-                        >
-                            <img src={rightarrow}/>
-                        </button>
+                               className={!isCorrectEmail ? "error-input" : 'submit-input'}
+                        />
+                        {
+                            isFilled ?
+                                <div className={'filled-btns'}>
+                                    {isCorrectEmail?
+                                       <button
+                                        onClick={sendEmail}
+                                            >
+                                            <img src={rightarrow}/>
+                                        </button>
+                                        :
+                                        <button disabled>
+                                            <img src={rightarrow}/>
+                                        </button>
+                                    }
+                                </div>
+                                :
+                                <button disabled>
+                                    <img src={rightarrow}/>
+                                </button>
+                        }
                     </form>
+                    {!isCorrectEmail ? <span className={'err-message'}>Oops, the Email seems to be misspelled or invalid... Please check and try again.</span> : null}
                 </div>
+                {
+                    isSubmit?
+                        <div className="alert-web">
+                            {isCorrectEmail ?
+                                <FadeDiv>
+                                    <img src={complete}/>
+                                    <span className="succsess-text">You've successfully subscribed</span>
+                                </FadeDiv>
+                                :
+                                null
+                            }
+                        </div>
+                        : null
+                }
+
             </div>
+            {
+                isSubmit?
+                    <div className="alert">
+                        {isCorrectEmail ?
+                            <FadeMobDiv>
+                                <img src={complete}/>
+                                <span className="succsess-text">You've successfully subscribed</span>
+                            </FadeMobDiv>
+                            :
+                            null
+                        }
+                    </div>
+                    : null
+            }
         </div>
     )
 }
