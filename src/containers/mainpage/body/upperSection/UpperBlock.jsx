@@ -7,7 +7,7 @@ import play from "../../../../assets/images/Android.png";
 import iosbtn from "../../../../assets/images/iosbtn.svg";
 import androidbtn from "../../../../assets/images/androidbtn.svg";
 import devices from "../../../../assets/images/mobdevices.png";
-import webdevices from "../../../../assets/images/webdevices.png";
+import webdevices from "../../../../assets/images/devices.png";
 
 const UpperBlock = () => {
 

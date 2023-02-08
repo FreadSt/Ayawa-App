@@ -1,8 +1,7 @@
 import './style.scss'
 import Footer from "../../containers/footer/Footer";
 import succsess from "../../assets/images/subscribe.png";
-import background from "../../assets/images/WEB_BG.mp4";
-import videoBG from "../../assets/images/WEB_BG.mp4";
+import videoBG from "../../assets/images/background.mp4";
 import appstore from "../../assets/images/appstore.png";
 import android from "../../assets/images/Android.png";
 

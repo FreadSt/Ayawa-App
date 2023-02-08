@@ -9,14 +9,13 @@ import repeat from "../../../assets/images/Repeate1.png";
 import activity from "../../../assets/images/Chart.png";
 import emailjs from '@emailjs/browser';
 import {useEffect, useRef, useState} from "react";
-import videoBG from '../../../assets/images/background.mp4';
+import videoBG from '../../../assets/images/background (video-converter.com).webm';
 import advancedaiimg from "../../../assets/images/advandecai.png";
 import rightarrow from "../../../assets/images/rightarrow.png";
 import styled, { keyframes } from 'styled-components';
 import { fadeInDownBig, fadeInUpBig } from 'react-animations';
-import danger from "../../../assets/images/dangertriangle.png";
 import complete from "../../../assets/images/complete.png";
-import {Parallax, ParallaxProvider, useParallax} from "react-scroll-parallax";
+import {Parallax, ParallaxProvider} from "react-scroll-parallax";
 import iosbtn from "../../../assets/images/appstore.svg";
 import androidbtn from "../../../assets/images/androidbtn.svg";
 

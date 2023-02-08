@@ -1,7 +1,6 @@
 import './style.scss'
 import Footer from "../../containers/footer/Footer";
-import background from "../../assets/images/WEB_BG.mp4";
-import videoBG from "../../assets/images/WEB_BG.mp4";
+import videoBG from "../../assets/images/background.mp4";
 import image from "../../assets/images/reset.png";
 import tick from "../../assets/images/Tick.png";
 import hide from "../../assets/images/Hide.png";
