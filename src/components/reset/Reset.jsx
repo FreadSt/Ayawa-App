@@ -40,8 +40,11 @@ const Reset = () => {
                         <div className={'inner-container'}>
                             <img src={image} alt={''} className={'main-img'}/>
                             <div className={'text'}>
-                                <h1>Enter New Password</h1>
-                                <span>for <b>name@mail.com</b> account</span>
+                                <h1>Your new password
+                                    has been accepted</h1>
+                                <p>You no longer need this page.
+                                    You may close it and return back to the app.</p>
+                                <span>Good luck!</span>
                             </div>
                         </div>
                     </div>

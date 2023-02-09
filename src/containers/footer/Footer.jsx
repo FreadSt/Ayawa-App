@@ -10,6 +10,7 @@ import './style.scss';
 const Footer = () => {
     return(
         <div className={'footer'}>
+            
             <div className={'credits'}>
                 <div className={'from'}>
                     <img src={logo} className={'footer-logo'}/>

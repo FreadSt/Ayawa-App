@@ -3,7 +3,7 @@
   font-family: GothamRoundedLight;
   .submit-window{
     width: 590px;
-    height: 424px;
+    height: 374px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -17,6 +17,7 @@
       object-fit: cover;
     }
     .inner-container{
+      position: absolute;
 
     }
   }
