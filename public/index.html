@@ -45,11 +45,12 @@
         background-color: #0b0b0b;
       }
       .loader-wrapper {
-        width: 100%;
-        height: 70%;
         position: fixed;
-        top: 20vh;
+        z-index: 9999!important;
+        top: 0;
         left: 0;
+        right: 0;
+        bottom: 0;
         background-color: #0b0b0b;
         display: grid;
         place-items: center;
@@ -58,6 +59,9 @@
         z-index: 10;
         width: 350px;
         height: 280px;
+      }
+      .loader-hide{
+        display: none!important;
       }
       @media(max-width:430px){
         .title-preload{
@@ -75,15 +79,14 @@
       }
     </style>
   </head>
+  <div class="loader-wrapper">
+    <img src="/title.png" class="title-preload"/>
+    <span class="font-link">The evolution of meditation apps using AI</span>
+    <img src='/comp.gif' class="gif"/>
+  </div>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root">
-      <div class="loader-wrapper">
-        <img src="/title.png" class="title-preload"/>
-        <span class="font-link">The evolution of meditation apps using AI</span>
-        <img src='/comp.gif' class="gif"/>
-      </div>
-    </div>
+    <div id="root"></div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.

@@ -9,8 +9,9 @@ import androidbtn from "../../../../assets/images/androidbtn.svg";
 import devices from "../../../../assets/images/mobdevices.png";
 import webdevices from "../../../../assets/images/devices.png";
 
-const UpperBlock = () => {
+import {useState} from 'react';
 
+const UpperBlock = () => {
     const showBtn = window.addEventListener('scroll', () => {
         const scrollToTop = document.querySelector('.phoneandclock');
         if (window.scrollY > 0) {
@@ -26,7 +27,7 @@ const UpperBlock = () => {
     });
 
     return(
-        <div className={'upper-wrapper'}>
+        <div className={'upper-wrapper'} >
             <div className={'web-layout'}>
                 <div className={'title-block'}>
                     <img className={'ayawa-logo'} src={logo} alt={''}/>
