@@ -47,7 +47,6 @@
           font-weight: 300;
           width: 400px;
           margin: 0;
-          opacity: 0.7;
         }
         p{
           font-family: GothamRoundedLight;
@@ -62,6 +61,40 @@
           color: #ffffff;
           opacity: 0.7;
           font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 430px) {
+  .verify{
+    .message{
+      width: 100%;
+      .window{
+        width: 315px;
+        .window-block{
+          width: 275px;
+          img{
+            opacity: 1;
+          }
+          .window-title{
+            width: 275px;
+            font-size: 24px;
+            letter-spacing: -0.02px;
+            font-family: GothamRoundedLight;
+          }
+          p{
+            width: 225px!important;
+            line-height: 21px;
+            font-family: GothamRoundedBook;
+            font-size: 14px;
+          }
+          span{
+            line-height: 21px;
+            font-family: GothamRoundedBook;
+            font-size: 14px;
+          }
         }
       }
     }

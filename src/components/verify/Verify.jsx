@@ -1,9 +1,7 @@
 import './style.scss'
-import Footer from "../../containers/footer/Footer";
 import succsess from "../../assets/images/subscribe.png";
 import videoBG from "../../assets/images/background.mp4";
-import appstore from "../../assets/images/appstore.png";
-import android from "../../assets/images/Android.png";
+
 
 const Verify = () => {
     return(

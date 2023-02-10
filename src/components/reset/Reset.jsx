@@ -8,6 +8,8 @@ import succsess from "../../assets/images/subscribe.png";
 import {useState, useEffect} from 'react';
 import styled, {keyframes} from "styled-components";
 import {fadeInDownBig, fadeInUpBig} from "react-animations";
+import arrow from "../../assets/images/rightarrow.png";
+
 const fadeAnimation = keyframes`${fadeInDownBig}`;
 
 const FadeDiv = styled.div`
@@ -37,6 +39,10 @@ const Reset = () => {
             isError = true;
             setPassData({value: "", error:"Password is required"})
         }
+        if(!/(?=.*?[#?!@$%^&*-])/.test(passdata.value)){
+            isError = true;
+            setPassData({value: "", error:"Password is required"})
+        }
         if(!isError){
             setPassData({value:"", error:""})
             setIsSubmit(true)
@@ -54,12 +60,12 @@ const Reset = () => {
     return(
         <div className={'reset'}>
             {
-                isSubmit?
+                !isSubmit?
                     <FadeDiv>
                         <div className={'submit-window'}>
                             <video src={videoBG} autoPlay muted loop/>
                             <div className={'inner-container'}>
-                                <img src={succsess} alt={''} className={'succsess-img'}/>
+                                <img src={image} alt={''} className={'succsess-img'}/>
                                 <div className={'text'}>
                                     <h1>Your new password
                                         has been accepted</h1>
@@ -89,8 +95,12 @@ const Reset = () => {
                                     />
                                     <img className={'hide'} src={hide} onClick={togglePassword}/>
                                 </div>
-                                <button onClick={handleSubmit}>
+                                <button onClick={handleSubmit} className={'web-button'}>
                                     <img src={tick}/>
+                                </button>
+                                <button className={'mobile-button'} onClick={handleSubmit}>
+                                    <span>NEXT</span>
+                                    <img src={arrow}/>
                                 </button>
                             </div>
                             <p style={passdata.error ? {color:"#FF0606"} : {}}>
