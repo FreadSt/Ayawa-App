@@ -256,35 +256,38 @@
         display: flex;
         .disabled{
           cursor: default;
-        }
-        .ios-btn{
-        }
-        button{
           display: flex;
           align-items: center;
           justify-content: space-evenly;
           border: none;
           border-radius: 16px;
           padding: 20px;
-          width: 180px;
-          height: 75px;
+          width: 150px;
+          height: 35px;
+          margin-right: 10px;
+          background: transparent;
+          opacity: 0.5;
+          background: rgba(255, 255, 255, 0.05);
+          border-radius: 16px;
+        }
+        .ios-btn{
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+          border: none;
+          border-radius: 16px;
+          padding: 20px;
+          width: 150px;
+          height: 35px;
           margin-right: 10px;
           background: transparent;
           opacity: 0.5;
           background: rgba(255, 255, 255, 0.05);
           border-radius: 16px;
           cursor: pointer;
-          .button-des{
-            font-family: GothamRoundedBook;
-            color: #ffffff;
-            span{
-              font-size: 10px;
-            }
-            p{
-              margin: 0;
-              font-size: 18px;
-              line-height: 24px;
-            }
+          img{
+            width: 120px;
+            height: 35px;
           }
           .appstore{
             width: 24px;
@@ -294,6 +297,9 @@
             width: 29px;
             height: 16px;
           }
+        }
+        .ios-btn:hover{
+          opacity: 1;
         }
       }
     }
@@ -637,12 +643,13 @@
         }
         .promo-btns{
           margin-bottom: 3vh;
-          button{
-            width: 130px;
-            height: 65px;
+          a{
+            width: 90px!important;
+            height: 25px!important;
             padding: 20px;
             img{
-              width: 95%;
+              width: 95% !important;
+              height: 24px!important;
             }
             .appstore{
               width: 17px;

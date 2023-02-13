@@ -115,19 +115,16 @@
         cursor: default;
         margin-left: 10px;
       }
-      button{
+      a{
         align-items: center;
         padding: 20px 20px;
         display: flex;
-        width: 197px;
-        height: 75px;
+        width: 147px;
+        height: 35px;
         background: rgba(255, 255, 255, 0.1);
         border-radius: 16px;
         border: none;
         cursor: pointer;
-        .android-content{
-          
-        }
         /*
         img{
           width: 24px;
@@ -248,7 +245,7 @@
       .buttons-group{
         display: flex;
         align-items: center;
-        button{
+        a{
           align-items: center;
           display: flex;
           width: 150px;
@@ -257,8 +254,9 @@
           border-radius: 16px;
           border: none;
           margin-right: 10px;
+          justify-content: center;
           img{
-            width: 95%;
+            width: 85%;
           }
           .gplay{
             width: 27px;

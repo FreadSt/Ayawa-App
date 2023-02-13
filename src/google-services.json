@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "825037989779",
+    "project_id": "ayawa-267aa",
+    "storage_bucket": "ayawa-267aa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:825037989779:android:5f08b94aca512daf61ea66",
+        "android_client_info": {
+          "package_name": "com.wimble.ayawa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "825037989779-5oi09svdr7l11560lt8vmpjo1kn67rno.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.wimble.ayawa",
+            "certificate_hash": "4047ddc5d58231c373a11728b5548872831d3eb4"
+          }
+        },
+        {
+          "client_id": "825037989779-qcq94f4hgc0890v50bpug19fbmp80orq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvJqL8B6JI6Eopnux2C-9pkxH0tNByoiU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "825037989779-qcq94f4hgc0890v50bpug19fbmp80orq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "825037989779-oqm7m27r21iqmcns0199vs61ge2o65f7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.wimble.Ayawa"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

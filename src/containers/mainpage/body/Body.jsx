@@ -18,6 +18,7 @@ import complete from "../../../assets/images/complete.png";
 import {Parallax, ParallaxProvider} from "react-scroll-parallax";
 import iosbtn from "../../../assets/images/appstore.svg";
 import androidbtn from "../../../assets/images/androidbtn.svg";
+import promoios from '../../../assets/images/promo-apple.png';
 
 const cardsImg = [check, analyse, improve];
 const blockicons = [hrv, repeat, activity];
@@ -77,54 +78,6 @@ const Body = () => {
         setEmail({value: event.target.value, error: ""})
         setIsFilled(true)
     }
-    /* {
-                            isCorrectEmail?
-                                <button
-                                    onClick={sendEmail}
-                                >
-                                    <img src={rightarrow}/>
-                                </button>
-                                :<button
-                                disabled
-                                >
-                                    <img src={rightarrow}/>
-                                </button>
-                        }*/
-
-    /*
-    const showBtn = window.addEventListener('scroll', () => {
-        const scrollToTop = document.querySelector('.iphone');
-        if (window.scrollY <= 1100) {
-            scrollToTop.classList.add('show-scroll');
-        } else {
-            scrollToTop.classList.remove('show-scroll');
-        }
-        if(window.scrollY >=1100){
-            scrollToTop.classList.add('end-scroll')
-        }else{
-            scrollToTop.classList.remove('end-scroll')
-        }
-    });
-
-    PARRALAXLOGIC
-    useEffect(() => {
-        window.addEventListener("scroll", listenToScroll);
-        return () => {
-            window.removeEventListener("scroll", listenToScroll)
-        }
-    }, [isVisible])
-
-    const listenToScroll = () => {
-        let heightToShowFrom = 2400;
-        const winScroll = document.body.scrollTop ||
-            document.documentElement.scrollTop;
-        if (winScroll > heightToShowFrom) {
-            isVisible === "undefined" && setIsVisible(false);
-            console.log(isVisible, "visible")
-        }
-        console.log(winScroll, "scroll")
-    };
-    */
     return(
         <div className={'body-wrapper'}>
             <UpperBlock/>
@@ -301,12 +254,12 @@ const Body = () => {
                     <h1 className={'promo-title'}>First 500 registered users
                         will get the app for free forever!</h1>
                     <div className={'promo-btns'}>
-                        <button className={'ios-btn'}>
-                            <img src={iosbtn} className={'ios-content'}/>
-                        </button>
-                        <button disabled className={'disabled'}>
+                        <a className={'ios-btn'} href="https://apps.apple.com/ua/app/ayawa/id1670418737">
+                            <img src={promoios} className={'ios-content'}/>
+                        </a>
+                        <a disabled className={'disabled'}>
                             <img src={androidbtn} className={'android-content'}/>
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>

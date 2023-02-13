@@ -18,14 +18,13 @@ const Footer = () => {
                 </div>
 
                 <div className={'social'}>
-                    <div className={'app-store'}>
+                    <a className={'app-store'} href={"https://apps.apple.com/ua/app/ayawa/id1670418737"}>
                         <img src={appstore}/>
                         <div className={'appstore-des'}>
                             <span>Download on the</span>
-                    
                             <p>App Store</p>
                         </div>
-                    </div>
+                    </a>
 
                     <a href={"https://instagram.com/ayawameditation?igshid=YmMyMTA2M2Y="}>
                         <div className={'inst'}>

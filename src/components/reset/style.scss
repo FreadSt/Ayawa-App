@@ -203,6 +203,7 @@
               opacity: 0.7;
               font-size: 14px;
               font-family: GothamRoundedBook;
+              line-height: 21px;
             }
           }
           .web-button{
@@ -246,6 +247,12 @@
         height: 326px;
         .inner-container{
           width: 275px;
+          .succsess-img{
+            opacity: 1;
+            width: 23px;
+            height: 23px;
+            color: #FFFFFF;
+          }
           .text{
             width: 100%;
             align-items: center;

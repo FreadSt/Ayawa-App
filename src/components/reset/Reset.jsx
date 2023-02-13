@@ -1,10 +1,8 @@
 import './style.scss'
-import Footer from "../../containers/footer/Footer";
 import videoBG from "../../assets/images/background.mp4";
 import image from "../../assets/images/reset.png";
 import tick from "../../assets/images/Tick.png";
 import hide from "../../assets/images/Hide.png";
-import succsess from "../../assets/images/subscribe.png";
 import {useState, useEffect} from 'react';
 import styled, {keyframes} from "styled-components";
 import {fadeInDownBig, fadeInUpBig} from "react-animations";
@@ -60,7 +58,7 @@ const Reset = () => {
     return(
         <div className={'reset'}>
             {
-                !isSubmit?
+                isSubmit?
                     <FadeDiv>
                         <div className={'submit-window'}>
                             <video src={videoBG} autoPlay muted loop/>

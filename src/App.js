@@ -4,12 +4,9 @@ import MainPage from "./containers/mainpage/MainPage";
 import Verify from "./components/verify/Verify";
 import Footer from "./containers/footer/Footer";
 import Reset from "./components/reset/Reset";
-import OnImagesLoaded from 'react-on-images-loaded';
 import { useEffect, useState } from 'react';
 
 function App() {
-    const [loaded, setLoaded] = useState(false);
-
     const loader = document.querySelector(".loader-wrapper");
     console.log(loader, 'pre Loader')
     const showLoader = () => loader.classList.remove("loader-wrapper");

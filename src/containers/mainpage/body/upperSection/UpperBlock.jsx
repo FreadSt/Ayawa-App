@@ -3,13 +3,10 @@ import phoneandclock from '../../../../assets/images/phoneandclock.png';
 import logo from '../../../../assets/images/ayawaLogo.png';
 import scrollbox from "../../../../assets/images/scrolldown.png";
 import appstore from '../../../../assets/images/appstore.svg';
-import play from "../../../../assets/images/Android.png";
 import iosbtn from "../../../../assets/images/iosbtn.svg";
 import androidbtn from "../../../../assets/images/androidbtn.svg";
 import devices from "../../../../assets/images/mobdevices.png";
 import webdevices from "../../../../assets/images/devices.png";
-
-import {useState} from 'react';
 
 const UpperBlock = () => {
     const showBtn = window.addEventListener('scroll', () => {
@@ -28,6 +25,7 @@ const UpperBlock = () => {
 
     return(
         <div className={'upper-wrapper'} >
+
             <div className={'web-layout'}>
                 <div className={'title-block'}>
                     <img className={'ayawa-logo'} src={logo} alt={''}/>
@@ -40,28 +38,12 @@ const UpperBlock = () => {
                         <h1 className={'main-title'}>meditation app</h1>
                     </div>
                     <div className={'buttons-group'}>
-                        <button className={'ios-btn'}>
+                        <a className={'ios-btn'} href={"https://apps.apple.com/ua/app/ayawa/id1670418737"}>
                             <img src={appstore} className={'ios-content'}/>
-                        </button>
-                        <button className={'android-btn'}>
+                        </a>
+                        <a className={'android-btn'}>
                             <img src={androidbtn} className={'android-content'}/>
-                        </button>
-                        {/*
-                        <button className={'app-store'}>
-                            <img src={appstore} alt={''}/>
-                            <div className={'text-container'}>
-                                <span className={'upper-span'}>Download on the</span>
-                                <b>App Store</b>
-                            </div>
-                        </button>
-                        <button>
-                            <img src={play} className={'gplay'} alt={''}/>
-                            <div className={'text-container'}>
-                                <span className={'upper-span'}>Download on the</span>
-                                <b>Google Play</b>
-                            </div>
-                        </button>
-                        */}
+                        </a>
                     </div>
 
                     <div className={'scroll-block'}>
@@ -97,12 +79,12 @@ const UpperBlock = () => {
                     meditation app
                 </h1>
                 <div className={'buttons-group'}>
-                    <button>
+                    <a href="https://apps.apple.com/ua/app/ayawa/id1670418737">
                         <img src={iosbtn} className={'ios-content'}/>
-                    </button>
-                    <button>
+                    </a>
+                    <a>
                         <img src={androidbtn} className={'android-content'}/>
-                    </button>
+                    </a>
                 </div>
                 <img src={devices} alt={'phone&clock'} className={'phoneandclock'}/>
                 <div className={'description'}>
