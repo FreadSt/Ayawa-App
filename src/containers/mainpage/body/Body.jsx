@@ -86,7 +86,7 @@ const Body = () => {
                     <div className={'cards'}>
                         <ScrollAnimations
                             animateIn="animate__fadeInUp"
-                            offset={150}
+                            offset={-150}
                             delay={200}
                             animateOnce={true}
                         >
@@ -104,7 +104,7 @@ const Body = () => {
                         </ScrollAnimations>
                         <ScrollAnimations
                             animateIn="animate__fadeInUp"
-                            offset={150}
+                            offset={-150}
                             delay={600}
                             animateOnce={true}
                         >
@@ -122,7 +122,7 @@ const Body = () => {
                         </ScrollAnimations>
                         <ScrollAnimations
                             animateIn="animate__fadeInUp"
-                            offset={150}
+                            offset={-150}
                             delay={800}
                             animateOnce={true}
                         >
@@ -143,7 +143,7 @@ const Body = () => {
             <div className={'hrv-tracker'}>
                 {isVisible?
                     <ParallaxProvider>
-                        <Parallax translateY={[0, 17]}
+                        <Parallax translateY={[-1, 31]}
                                   speed={100}
                                   startScroll={2400}
                         >
@@ -171,10 +171,6 @@ const Body = () => {
                                 balance between the sympathetic and parasympathetic nervous systems,
                                 overall health and well-being, as a marker of stress to relaxation ratio.
                             </p>
-                        </ScrollAnimations>
-                        <ScrollAnimations animateIn={'animate__fadeInUp'}
-                                          animateOnce={true}
-                        >
                             <p>
                                 By monitoring HRV during meditation, you can gain insights on how your body is responding to
                                 meditation practice and make proper adjustments.
