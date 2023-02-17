@@ -83,18 +83,12 @@ const Body = () => {
         <div className={'body-wrapper'}>
             <UpperBlock/>
             <div className={'inner-box'}>
-                <ScrollAnimations
-                    animateIn="animate__fadeInUp"
-                    offset={450}
-                    delay={200}
-                    animateOut="animate__fadeOut"
-                >
                     <div className={'cards'}>
                         <ScrollAnimations
                             animateIn="animate__fadeInUp"
-                            offset={450}
+                            offset={150}
                             delay={200}
-                            animateOut="animate__fadeOut"
+                            animateOnce={true}
                         >
                             <div className={'card'}>
                                 <div className={'img-box'}>
@@ -110,9 +104,9 @@ const Body = () => {
                         </ScrollAnimations>
                         <ScrollAnimations
                             animateIn="animate__fadeInUp"
-                            offset={450}
+                            offset={150}
                             delay={600}
-                            animateOut="animate__fadeOut"
+                            animateOnce={true}
                         >
                             <div className={'card'}>
                                 <div className={'img-box'}>
@@ -128,9 +122,9 @@ const Body = () => {
                         </ScrollAnimations>
                         <ScrollAnimations
                             animateIn="animate__fadeInUp"
-                            offset={450}
+                            offset={150}
                             delay={800}
-                            animateOut="animate__fadeOut"
+                            animateOnce={true}
                         >
                             <div className={'card'}>
                                 <div className={'img-box'}>
@@ -145,7 +139,6 @@ const Body = () => {
                             </div>
                         </ScrollAnimations>
                     </div>
-                </ScrollAnimations>
             </div>
             <div className={'hrv-tracker'}>
                 {isVisible?
@@ -164,10 +157,14 @@ const Body = () => {
                 {/*<img alt={'phone'} src={iphone} className={'iphone layer1'}/>*/}
                 <div className={'hrv-des'}>
                     <div className={'upper-des'}>
-                        <ScrollAnimations animateIn={'animate__fadeInUp'}>
+                        <ScrollAnimations animateIn={'animate__fadeInUp'}
+                                          animateOnce={true}
+                        >
                             <h1 className={'hrv-title'}>Heart Rate Variability Tracker</h1>
                         </ScrollAnimations>
-                        <ScrollAnimations animateIn={'animate__fadeInUp'}>
+                        <ScrollAnimations animateIn={'animate__fadeInUp'}
+                                          animateOnce={true}
+                        >
                             <p>
                                 HRV (Heart Rate Variability) is a measure of the variation in time
                                 between consecutive heart beats, and is often used as an indicator of the
@@ -175,13 +172,17 @@ const Body = () => {
                                 overall health and well-being, as a marker of stress to relaxation ratio.
                             </p>
                         </ScrollAnimations>
-                        <ScrollAnimations animateIn={'animate__fadeInUp'}>
+                        <ScrollAnimations animateIn={'animate__fadeInUp'}
+                                          animateOnce={true}
+                        >
                             <p>
                                 By monitoring HRV during meditation, you can gain insights on how your body is responding to
                                 meditation practice and make proper adjustments.
                             </p>
                         </ScrollAnimations>
-                        <ScrollAnimations animateIn={'animate__fadeInUp'}>
+                        <ScrollAnimations animateIn={'animate__fadeInUp'}
+                                          animateOnce={true}
+                        >
                             <div className={'hrv-blocks'}>
                                 {
                                     [
@@ -211,13 +212,19 @@ const Body = () => {
                         </ScrollAnimations>
                     </div>
                     <div className={'movement-block'}>
-                        <ScrollAnimations animateIn={'animate__fadeInDown'}>
+                        <ScrollAnimations animateIn={'animate__fadeInUp'}
+                                          animateOnce={true}
+                        >
                             <h1 className={'move-title'}>Movement tracker</h1>
                         </ScrollAnimations>
-                        <ScrollAnimations animateIn={'animate__fadeInUp'}>
+                        <ScrollAnimations animateIn={'animate__fadeInUp'}
+                                          animateOnce={true}
+                        >
                             <p>During the meditation, the goal is to focus the mind and bring it to a state of stillness and calm. Monitor your movements to enhance the effectiveness of your meditation sessions.</p>
                         </ScrollAnimations>
-                        <ScrollAnimations animateIn={'animate__fadeIn'} offset={350}>
+                        <ScrollAnimations animateIn={'animate__fadeIn'} offset={350}
+                                          animateOnce={true}
+                        >
                             <div className={'movement-boxes'}>
                                 {
                                     [
@@ -244,11 +251,13 @@ const Body = () => {
             </div>
 
             <div className={'hrv-tracker-mobile'}>
-                <ScrollAnimations animateIn={'animate__fadeInUp'}>
+                <ScrollAnimations animateIn={'animate__fadeInUp'}
+                                  animateOnce={true}>
                     <h1>Heart Rate
                         Variability Tracker</h1>
                 </ScrollAnimations>
-                <ScrollAnimations animateIn={'animate__fadeInUp'}>
+                <ScrollAnimations animateIn={'animate__fadeInUp'}
+                                  animateOnce={true}>
                     <p>
                         HRV (Heart Rate Variability) is a measure of the variation in time
                         between consecutive heart beats, and is often used as an indicator of the
@@ -256,13 +265,15 @@ const Body = () => {
                         overall health and well-being, as a marker of stress to relaxation ratio.
                     </p>
                 </ScrollAnimations>
-                <ScrollAnimations animateIn={'animate__fadeInUp'}>
+                <ScrollAnimations animateIn={'animate__fadeInUp'}
+                                  animateOnce={true}>
                     <p>
                         By monitoring HRV during meditation, you can gain insights on how your body is responding to
                         meditation practice and make proper adjustments.
                     </p>
                 </ScrollAnimations>
-                <ScrollAnimations animateIn={'animate__fadeIn'} offset={400}>
+                <ScrollAnimations animateIn={'animate__fadeIn'} offset={400}
+                                  animateOnce={true}>
                     <div className={'hrv-blocks'}>
                         {
                             [
@@ -314,80 +325,90 @@ const Body = () => {
                     </div>
                 </div>
             </div>
-            <div className={'promo'}>
-                <video src={videoBG} autoPlay loop muted/>
-                <div className={'promo-block'}>
-                    <h1 className={'promo-title'}>First 500 registered users
-                        will get the app for free forever!</h1>
-                    <div className={'promo-btns'}>
-                        <a className={'ios-btn'} href="https://apps.apple.com/ua/app/ayawa/id1670418737">
-                            <img src={iosbtn} className={'ios-content'}/>
-                        </a>
-                        <a disabled className={'disabled'}>
-                            <img src={androidbtn} className={'android-content'}/>
-                        </a>
+            <ScrollAnimations animateIn={'animate__fadeInUp'} animateOnce={true}>
+                <div className={'promo'}>
+                    <video src={videoBG} autoPlay loop muted/>
+                    <div className={'promo-block'}>
+                        <h1 className={'promo-title'}>First 500 registered users
+                            will get the app for free forever!</h1>
+                        <div className={'promo-btns'}>
+                            <a className={'ios-btn'} href="https://apps.apple.com/ua/app/ayawa/id1670418737">
+                                <img src={iosbtn} className={'ios-content'}/>
+                            </a>
+                            <a disabled className={'disabled'}>
+                                <img src={androidbtn} className={'android-content'}/>
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </ScrollAnimations>
             <div className={'advancedAI'}>
-                <img src={advancedaiimg} alt={''}/>
-                <h1>Advanced AI coming soon</h1>
-                <p>AI is currently at the learning stage and You can help us to speed this process up by simply using AYAWA app.
-                    Hopefully we’ll be able to release advanced AI features as a part of the closest update.</p>
-                <p style={{margin:'0'}}>Thank you for your patience and support!</p>
+                <ScrollAnimations animateIn={'animate__fadeInUp'} animateOnce={true}>
+                    <img src={advancedaiimg} alt={''}/>
+                </ScrollAnimations>
+                <ScrollAnimations animateIn={'animate__fadeInUp'} animateOnce={true}>
+                    <h1>Advanced AI coming soon</h1>
+                </ScrollAnimations>
+                <ScrollAnimations animateIn={'animate__fadeInUp'} animateOnce={true}>
+                    <p>AI is currently at the learning stage and You can help us to speed this process up by simply using AYAWA app.
+                        Hopefully we’ll be able to release advanced AI features as a part of the closest update.</p>
+                    <p style={{margin:'0'}}>Thank you for your patience and support!</p>
+                </ScrollAnimations>
             </div>
-            <div className={'join'}>
-                <video src={videoBG} loop muted autoPlay/>
-                <div className={'join-des'}>
-                    <h1>Join the Newsletter</h1>
-                    <span>Get notified on important news and updates from AYAWA</span>
-                    <form className={'join-input'} ref={form} onSubmit={handleSubmit}>
-                        <input placeholder="Email adress"
-                               type={"text"}
-                               onChange={handleChangeEmail}
-                               value={email.value}
-                               name="user_email"
-                               className={!isCorrectEmail ? "error-input" : 'submit-input'}
-                        />
-                        {
-                            isFilled ?
-                                <div className={'filled-btns'}>
-                                    {isCorrectEmail?
-                                       <button
-                                        onClick={sendEmail}
+            <ScrollAnimations animateIn={'animate__fadeInUp'} animateOnce={true}>
+                <div className={'join'}>
+                    <video src={videoBG} loop muted autoPlay/>
+                    <div className={'join-des'}>
+                        <h1>Join the Newsletter</h1>
+                        <span>Get notified on important news and updates from AYAWA</span>
+                        <form className={'join-input'} ref={form} onSubmit={handleSubmit}>
+                            <input placeholder="Email adress"
+                                   type={"text"}
+                                   onChange={handleChangeEmail}
+                                   value={email.value}
+                                   name="user_email"
+                                   className={!isCorrectEmail ? "error-input" : 'submit-input'}
+                            />
+                            {
+                                isFilled ?
+                                    <div className={'filled-btns'}>
+                                        {isCorrectEmail?
+                                            <button
+                                                onClick={sendEmail}
                                             >
-                                            <img src={rightarrow}/>
-                                        </button>
-                                        :
-                                        <button disabled>
-                                            <img src={rightarrow}/>
-                                        </button>
-                                    }
-                                </div>
-                                :
-                                <button disabled>
-                                    <img src={rightarrow}/>
-                                </button>
-                        }
-                    </form>
-                    {!isCorrectEmail ? <span className={'err-message'}>Oops, the Email seems to be misspelled or invalid... Please check and try again.</span> : null}
-                </div>
-                {
-                    isSubmit?
-                        <div className="alert-web">
-                            {isCorrectEmail ?
-                                <FadeDiv>
-                                    <img src={complete}/>
-                                    <span className="succsess-text">You've successfully subscribed</span>
-                                </FadeDiv>
-                                :
-                                null
+                                                <img src={rightarrow}/>
+                                            </button>
+                                            :
+                                            <button disabled>
+                                                <img src={rightarrow}/>
+                                            </button>
+                                        }
+                                    </div>
+                                    :
+                                    <button disabled>
+                                        <img src={rightarrow}/>
+                                    </button>
                             }
-                        </div>
-                        : null
-                }
+                        </form>
+                        {!isCorrectEmail ? <span className={'err-message'}>Oops, the Email seems to be misspelled or invalid... Please check and try again.</span> : null}
+                    </div>
+                    {
+                        isSubmit?
+                            <div className="alert-web">
+                                {isCorrectEmail ?
+                                    <FadeDiv>
+                                        <img src={complete}/>
+                                        <span className="succsess-text">You've successfully subscribed</span>
+                                    </FadeDiv>
+                                    :
+                                    null
+                                }
+                            </div>
+                            : null
+                    }
 
-            </div>
+                </div>
+            </ScrollAnimations>
             {
                 isSubmit?
                     <div className="alert">

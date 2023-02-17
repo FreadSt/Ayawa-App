@@ -6,6 +6,7 @@ import iosbtn from "../../../../assets/images/iosbtn.svg";
 import androidbtn from "../../../../assets/images/androidbtn.svg";
 import devices from "../../../../assets/images/mobdevicescompressed.png";
 import webdevices from "../../../../assets/images/devices.png";
+import ScrollAnimations from "react-animate-on-scroll";
 
 const UpperBlock = () => {
     const showBtn = window.addEventListener('scroll', () => {
@@ -52,17 +53,27 @@ const UpperBlock = () => {
 
                     <div className={'description'}>
                         <div className={'title-des'}>
-                            <h1 className={'title'}>Elevate your</h1>
-                            <h1 className={'title'}>meditation experience</h1>
-                            <h1 className={'title'}>with Ayawa</h1>
+                            <ScrollAnimations animateIn={'animate__fadeInUp'} animateOnce={true}>
+                                <h1 className={'title'}>Elevate your</h1>
+                            </ScrollAnimations>
+                            <ScrollAnimations animateIn={'animate__fadeInUp'} animateOnce={true}>
+                                <h1 className={'title'}>meditation experience</h1>
+                            </ScrollAnimations>
+                            <ScrollAnimations animateIn={'animate__fadeInUp'} animateOnce={true}>
+                                <h1 className={'title'}>with Ayawa</h1>
+                            </ScrollAnimations>
                         </div>
-                        <p className={'upper-des'}>AYAWA is a technology-based meditation app that helps to transit from guided relaxation
-                            to true meditation, or / and to enhance
-                            sessions quality.</p>
-                        <p className={'lower-des'}>It is the first app on the market designed to track the results of meditation sessions, monitor
-                            the impact of meditations on physical state,
-                            and helps continuously improve the quality
-                            of each session.</p>
+                        <ScrollAnimations animateIn={"animate__fadeInUp"} animateOnce={true}>
+                            <p className={'upper-des'}>AYAWA is a technology-based meditation app that helps to transit from guided relaxation
+                                to true meditation, or / and to enhance
+                                sessions quality.</p>
+                        </ScrollAnimations>
+                        <ScrollAnimations animateIn={"animate__fadeInUp"} animateOnce={true}>
+                            <p className={'lower-des'}>It is the first app on the market designed to track the results of meditation sessions, monitor
+                                the impact of meditations on physical state,
+                                and helps continuously improve the quality
+                                of each session.</p>
+                        </ScrollAnimations>
                     </div>
                 </div>
                 <img src={webdevices} alt={'phone&clock'} className={'phoneandclock'}/>
