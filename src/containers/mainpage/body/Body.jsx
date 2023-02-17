@@ -289,9 +289,9 @@ const Body = () => {
                         }
                     </div>
                 </ScrollAnimations>
-                <ScrollAnimations animateIn={'animate__fadeInDown'}>
-                    <img alt={'phone'} src={iphone} className={'iphone'}/>
-                </ScrollAnimations>
+
+                <img alt={'phone'} src={iphone} className={'iphone'}/>
+
                 <div className={'movement-block'}>
                     <h1 className={'move-title'}>Movement tracker</h1>
                     <p>During the meditation, the goal is to focus the mind and bring it to a state of stillness and calm. Monitor your movements to enhance the effectiveness of your meditation sessions.</p>
