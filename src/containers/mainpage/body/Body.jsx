@@ -86,7 +86,7 @@ const Body = () => {
                     <div className={'cards'}>
                         <ScrollAnimations
                             animateIn="animate__fadeInUp"
-                            offset={-150}
+                            offset={300}
                             delay={200}
                             animateOnce={true}
                         >
@@ -104,8 +104,8 @@ const Body = () => {
                         </ScrollAnimations>
                         <ScrollAnimations
                             animateIn="animate__fadeInUp"
-                            offset={-150}
-                            delay={600}
+                            offset={300}
+                            delay={400}
                             animateOnce={true}
                         >
                             <div className={'card'}>
@@ -122,8 +122,8 @@ const Body = () => {
                         </ScrollAnimations>
                         <ScrollAnimations
                             animateIn="animate__fadeInUp"
-                            offset={-150}
-                            delay={800}
+                            offset={300}
+                            delay={600}
                             animateOnce={true}
                         >
                             <div className={'card'}>
@@ -176,33 +176,45 @@ const Body = () => {
                                 meditation practice and make proper adjustments.
                             </p>
                         </ScrollAnimations>
-                        <ScrollAnimations animateIn={'animate__fadeInUp'}
-                                          animateOnce={true}
-                        >
-                            <div className={'hrv-blocks'}>
-                                {
-                                    [
-                                        {img: blockicons[0], des: "Track HRV change over time to see if the practice is having a positive impact on your overall well-being", id:1},
-                                        {img: blockicons[1], des: "Identify HRV patterns corresponding to stages of the session", secDes:"(e.g. Release to Relax stage transition)", id:2},
-                                        {img: blockicons[2], des: "Monitor sessions reports and explore the effectiveness of different types of meditation techniques", id:3}
-                                    ].map((item, index) => {
-                                        return(
-                                            <div className={'hrv-block-wrapper'} key={index}>
-                                                <div className={'img-box'}>
-                                                    <img src={item.img} alt={''}/>
-                                                </div>
-                                                <div className={'des-box'}>
-                                                    <div className={'inner-box'}>
-                                                        <p className={'des'}>{item.des}</p>
-                                                        <p className={'sup-des'}>{item.secDes}</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        )
-                                    })
-                                }
-                            </div>
-                        </ScrollAnimations>
+                        <div className={'hrv-blocks'}>
+                            <ScrollAnimations animateIn={'animate__fadeInUp'} delay={400} animateOnce={true}>
+                                <div className={'hrv-block-wrapper'}>
+                                    <div className={'img-box'}>
+                                        <img src={blockicons[0]} alt={''}/>
+                                    </div>
+                                    <div className={'des-box'}>
+                                        <div className={'inner-box'}>
+                                            <p className={'des'}>Track HRV change over time to see if the practice is having a positive impact on your overall well-being</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ScrollAnimations>
+                            <ScrollAnimations animateIn={'animate__fadeInUp'} delay={600} animateOnce={true}>
+                                <div className={'hrv-block-wrapper'}>
+                                    <div className={'img-box'}>
+                                        <img src={blockicons[1]} alt={''}/>
+                                    </div>
+                                    <div className={'des-box'}>
+                                        <div className={'inner-box'}>
+                                            <p className={'des'}>Identify HRV patterns corresponding to stages of the session"</p>
+                                            <p className={'sup-des'}>(e.g. Release to Relax stage transition)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ScrollAnimations>
+                            <ScrollAnimations animateIn={'animate__fadeInUp'} delay={800} animateOnce={true}>
+                                <div className={'hrv-block-wrapper'}>
+                                    <div className={'img-box'}>
+                                        <img src={blockicons[2]} alt={''}/>
+                                    </div>
+                                    <div className={'des-box'}>
+                                        <div className={'inner-box'}>
+                                            <p className={'des'}>Monitor sessions reports and explore the effectiveness of different types of meditation techniques</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ScrollAnimations>
+                        </div>
                         <ScrollAnimations animateIn={'animate__fadeInUp'}>
 
                         </ScrollAnimations>
@@ -218,30 +230,40 @@ const Body = () => {
                         >
                             <p>During the meditation, the goal is to focus the mind and bring it to a state of stillness and calm. Monitor your movements to enhance the effectiveness of your meditation sessions.</p>
                         </ScrollAnimations>
-                        <ScrollAnimations animateIn={'animate__fadeIn'} offset={350}
-                                          animateOnce={true}
-                        >
                             <div className={'movement-boxes'}>
-                                {
-                                    [
-                                        {title:"Reduce distractions", description:"Limit the potential for physical distractions, such as discomfort or itchiness"},
-                                        {title:"Increase the focus", description:"Focus on your internal experience and awareness and deepen your practice"},
-                                        {title:"Maintain the posture", description:"That will improve breathing and allow you to relax and focus easier."},
-                                        {title:"Boost the mindfulness", description:"By staying still you can focus on the present and increase mindfulness"},
-
-                                    ].map((item, index) => {
-                                        return(
-                                            <div className={'move-box'} key={index}>
-                                                <div>
-                                                    <h1>{item.title}</h1>
-                                                    <p>{item.description}</p>
-                                                </div>
-                                            </div>
-                                        )
-                                    })
-                                }
+                                <ScrollAnimations animateIn={'animate__fadeInUp'} delay={400} animateOnce={true}>
+                                    <div className={'move-box'}>
+                                        <div>
+                                            <h1>Reduce distractions</h1>
+                                            <p>Limit the potential for physical distractions, such as discomfort or itchiness</p>
+                                        </div>
+                                    </div>
+                                </ScrollAnimations>
+                                <ScrollAnimations animateIn={'animate__fadeInUp'} delay={600} animateOnce={true}>
+                                    <div className={'move-box'}>
+                                        <div>
+                                            <h1>Increase the focus</h1>
+                                            <p>Focus on your internal experience and awareness and deepen your practice</p>
+                                        </div>
+                                    </div>
+                                </ScrollAnimations>
+                                <ScrollAnimations animateIn={'animate__fadeInUp'} delay={800} animateOnce={true}>
+                                    <div className={'move-box'}>
+                                        <div>
+                                            <h1>Maintain the posture</h1>
+                                            <p>That will improve breathing and allow you to relax and focus easier.</p>
+                                        </div>
+                                    </div>
+                                </ScrollAnimations>
+                                <ScrollAnimations animateIn={'animate__fadeInUp'} delay={1000} animateOnce={true}>
+                                    <div className={'move-box'}>
+                                        <div>
+                                            <h1>Boost the mindfulness</h1>
+                                            <p>By staying still you can focus on the present and increase mindfulness</p>
+                                        </div>
+                                    </div>
+                                </ScrollAnimations>
                             </div>
-                        </ScrollAnimations>
                     </div>
                 </div>
             </div>

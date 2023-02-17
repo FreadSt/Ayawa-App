@@ -57,7 +57,10 @@ const UpperBlock = () => {
                                 <h1 className={'title'}>Elevate your</h1>
                             </ScrollAnimations>
                             <ScrollAnimations animateIn={'animate__fadeInUp'} animateOnce={true}>
-                                <h1 className={'title'}>meditation experience</h1>
+                                <h1 className={'title'}>meditation</h1>
+                            </ScrollAnimations>
+                            <ScrollAnimations animateIn={'animate__fadeInUp'} animateOnce={true}>
+                                <h1 className={'title'}>experience</h1>
                             </ScrollAnimations>
                             <ScrollAnimations animateIn={'animate__fadeInUp'} animateOnce={true}>
                                 <h1 className={'title'}>with Ayawa</h1>
