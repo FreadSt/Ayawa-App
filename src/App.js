@@ -5,6 +5,9 @@ import Verify from "./components/verify/Verify";
 import Footer from "./containers/footer/Footer";
 import Reset from "./components/reset/Reset";
 import { useEffect, useState } from 'react';
+import Privacy from "./containers/footer/Privacy/Privacy";
+import Terms from "./containers/footer/Terms&Conditions/Terms";
+import ScrollToTop from "./ScrollToTop";
 
 function App() {
     const loader = document.querySelector(".loader-wrapper");
@@ -15,19 +18,22 @@ function App() {
     useEffect(() => {
         window.addEventListener('load', addClass);
             return () => window.removeEventListener('load', addClass);
-
     },[])
 
   return (
       <Router>
+          <ScrollToTop>
               <div className="App">
                   <Routes>
                       <Route exact path={'/'} element={<MainPage/>}/>
                       <Route path={'/verify'} element={<Verify/>}/>
                       <Route path={'/reset'} element={<Reset/>}/>
+                      <Route path={'/privacy'} element={<Privacy/>}/>
+                      <Route path={'/terms'} element={<Terms/>}/>
                   </Routes>
                   <Footer/>
               </div>
+          </ScrollToTop>
       </Router>
   );
 }

@@ -3,23 +3,36 @@ import videoBG from "../../assets/images/background.mp4";
 import image from "../../assets/images/reset.png";
 import tick from "../../assets/images/Tick.png";
 import hide from "../../assets/images/Hide.png";
-import {useState, useEffect} from 'react';
+import {useState, useEffect, useRef} from 'react';
 import styled, {keyframes} from "styled-components";
 import {fadeInDownBig, fadeInUpBig} from "react-animations";
 import arrow from "../../assets/images/rightarrow.png";
+import {useAuth} from "./AuthContext";
+import { useLocation } from 'react-router-dom';
 
 const fadeAnimation = keyframes`${fadeInDownBig}`;
-
 const FadeDiv = styled.div`
   animation: 1s ${fadeAnimation};
 `;
+
+function useQuery() {
+    return new URLSearchParams(useLocation().search)
+}
 
 const Reset = () => {
     const [passdata, setPassData] = useState({value: '', error: ''})
     const [passwordShown, setPasswordShown] = useState(false);
     const [isSubmit, setIsSubmit] = useState(false)
-    const handleSubmit = (event) => {
+    const query = useQuery()
+    const { resetPassword } = useAuth()
+
+    const handleSubmit = async (event) => {
         event.preventDefault()
+        try {
+            await resetPassword(query.get('oobCode'), passdata)
+        } catch (error) {
+            console.log(error.message)
+        }
         let isError = false
         if(!passdata.value) {
             setPassData({value: "", error:"Password is required"})
@@ -42,9 +55,12 @@ const Reset = () => {
             setPassData({value: "", error:"Password is required"})
         }
         if(!isError){
-            setPassData({value:"", error:""})
-            setIsSubmit(true)
+            setPassData({value:"", error:""});
+            setIsSubmit(true);
+            resetPassword();
+            console.log(resetPassword(), "reset done")
         }
+
     }
     const handleChangePass = (event) => {
         setPassData({value: event.target.value, error: ""})
@@ -55,6 +71,7 @@ const Reset = () => {
         setPasswordShown(!passwordShown);
     };
     console.log(passdata, 'passdata')
+    console.log(query.get('mode'), query.get('oobCode'))
     return(
         <div className={'reset'}>
             {

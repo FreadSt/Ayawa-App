@@ -5,15 +5,17 @@ import appstore from "../../assets/images/appstore.png";
 import terms from "../../assets/TermsandConditions.pdf";
 import policy from "../../assets/PrivacyPolicy.pdf";
 import ua from "../../assets/images/ua.png";
+import { Link, useNavigate } from "react-router-dom";
 import './style.scss';
 
 const Footer = () => {
     return(
         <div className={'footer'}>
-            
             <div className={'credits'}>
                 <div className={'from'}>
-                    <img src={logo} className={'footer-logo'}/>
+                    <Link to={'/'}>
+                        <img src={logo} className={'footer-logo'}/>
+                    </Link>
                     <p>MADE WITH &#128151; IN <img src={ua} className={'ua'}/> UKRAINE</p>
                 </div>
 
@@ -45,28 +47,20 @@ const Footer = () => {
                     <span>All rights reserved. Trademark ™ Pending.</span>
                 </div>
                 <div className={'privacy-docs'}>
-                    <a className={'policy-link'}
-                       href={policy}
-                        target="_blank"
-                       rel="noreferrer"
-                    >Privacy Policy</a>
-                    <a href={terms}
-                        target="_blank"
-                       rel="noreferrer"
-                    >Terms and Conditions</a>
+                    <Link className={'policy-link'}
+                       to={'/privacy'}
+                    >Privacy Policy</Link>
+                    <Link to={'/terms'}
+                    >Terms and Conditions</Link>
                 </div>
             </div>
             <div className={'privacy-mob'}>
                 <div className={'privacy-docs'}>
-                    <a className={'policy-link'}
-                       href={policy}
-                       target="_blank"
-                       rel="noreferrer"
-                    >Privacy Policy</a>
-                    <a href={terms}
-                       target="_blank"
-                       rel="noreferrer"
-                    >Terms and Conditions</a>
+                    <Link className={'policy-link'}
+                       to={'/privacy'}
+                    >Privacy Policy</Link>
+                    <Link to={'/terms'}
+                    >Terms and Conditions</Link>
                 </div>
                 <div className={'description'}>
                     <span>Copyright © 2023 AYAWA.</span>

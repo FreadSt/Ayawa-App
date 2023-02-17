@@ -1,11 +1,10 @@
 import './style.scss';
-import phoneandclock from '../../../../assets/images/phoneandclock.png';
 import logo from '../../../../assets/images/ayawaLogo.png';
 import scrollbox from "../../../../assets/images/scrolldown.png";
-import appstore from '../../../../assets/images/appstore.svg';
+import appstore from '../../../../assets/images/appstorebtn.svg';
 import iosbtn from "../../../../assets/images/iosbtn.svg";
 import androidbtn from "../../../../assets/images/androidbtn.svg";
-import devices from "../../../../assets/images/mobdevices.png";
+import devices from "../../../../assets/images/mobdevicescompressed.png";
 import webdevices from "../../../../assets/images/devices.png";
 
 const UpperBlock = () => {

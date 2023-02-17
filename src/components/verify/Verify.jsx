@@ -2,7 +2,6 @@ import './style.scss'
 import succsess from "../../assets/images/subscribe.png";
 import videoBG from "../../assets/images/background.mp4";
 
-
 const Verify = () => {
     return(
         <div className={'verify'}>
