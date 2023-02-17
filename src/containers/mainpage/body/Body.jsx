@@ -90,27 +90,60 @@ const Body = () => {
                     animateOut="animate__fadeOut"
                 >
                     <div className={'cards'}>
-                        {
-                            [
-                                {img: cardsImg[0], title: "Check", des: "Gauge each meditation results", id:4},
-                                {img: cardsImg[2], title: "Analyse", des: "Stay on track with your progress", id:5},
-                                {img: cardsImg[1], title: "Improve", des: "Maximize benefits of your meditations", id:6}
-                            ].map((item, index) => {
-                                return(
-                                    <div className={'card'} key={index}>
-                                        <div className={'img-box'}>
-                                            <img src={item.img} alt={''}/>
-                                        </div>
-                                        <div className={'des-box'}>
-                                            <div className={'inner-box'}>
-                                                <h1>{item.title}</h1>
-                                                <p>{item.des}</p>
-                                            </div>
-                                        </div>
+                        <ScrollAnimations
+                            animateIn="animate__fadeInUp"
+                            offset={450}
+                            delay={200}
+                            animateOut="animate__fadeOut"
+                        >
+                            <div className={'card'}>
+                                <div className={'img-box'}>
+                                    <img src={cardsImg[0]} alt={''}/>
+                                </div>
+                                <div className={'des-box'}>
+                                    <div className={'inner-box'}>
+                                        <h1>Check</h1>
+                                        <p>Gauge each meditation results</p>
                                     </div>
-                                )
-                            })
-                        }
+                                </div>
+                            </div>
+                        </ScrollAnimations>
+                        <ScrollAnimations
+                            animateIn="animate__fadeInUp"
+                            offset={450}
+                            delay={600}
+                            animateOut="animate__fadeOut"
+                        >
+                            <div className={'card'}>
+                                <div className={'img-box'}>
+                                    <img src={cardsImg[2]} alt={''}/>
+                                </div>
+                                <div className={'des-box'}>
+                                    <div className={'inner-box'}>
+                                        <h1>Analyse</h1>
+                                        <p>Stay on track with your progress</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </ScrollAnimations>
+                        <ScrollAnimations
+                            animateIn="animate__fadeInUp"
+                            offset={450}
+                            delay={800}
+                            animateOut="animate__fadeOut"
+                        >
+                            <div className={'card'}>
+                                <div className={'img-box'}>
+                                    <img src={cardsImg[1]} alt={''}/>
+                                </div>
+                                <div className={'des-box'}>
+                                    <div className={'inner-box'}>
+                                        <h1>Improve</h1>
+                                        <p>Maximize benefits of your meditations</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </ScrollAnimations>
                     </div>
                 </ScrollAnimations>
             </div>
@@ -211,46 +244,54 @@ const Body = () => {
             </div>
 
             <div className={'hrv-tracker-mobile'}>
-                <h1>Heart Rate
-                    Variability Tracker</h1>
-                <p>
-                    HRV (Heart Rate Variability) is a measure of the variation in time
-                    between consecutive heart beats, and is often used as an indicator of the
-                    balance between the sympathetic and parasympathetic nervous systems,
-                    overall health and well-being, as a marker of stress to relaxation ratio.
-                </p>
-                <p>
-                    By monitoring HRV during meditation, you can gain insights on how your body is responding to
-                    meditation practice and make proper adjustments.
-                </p>
-                <div className={'hrv-blocks'}>
-                    {
-                        [
-                            {img: blockicons[0],
-                                des: "Track HRV change over time to see if the practice is having a positive impact on your overall well-being"},
-                            {img: blockicons[1], des: "Identify HRV patterns corresponding to stages of the session", secDes:"(e.g. Release to Relax stage transition)",},
-                            {img: blockicons[2],
-                                des: "Monitor sessions reports and explore the effectiveness of different types of meditation techniques"}
-                        ].map((item, index) => {
-                            return(
-                                <div className={'hrv-block-wrapper'} key={index}>
-                                    <div className={'img-box'}>
-                                        <img src={item.img} alt={''}/>
-                                    </div>
-                                    <div className={'des-box'}>
-                                        <div className={'inner-box'}>
-                                            <p className={'des'}>{item.des}</p>
-                                            <p className={'sup-description'}>{item.secDes}</p>
+                <ScrollAnimations animateIn={'animate__fadeInUp'}>
+                    <h1>Heart Rate
+                        Variability Tracker</h1>
+                </ScrollAnimations>
+                <ScrollAnimations animateIn={'animate__fadeInUp'}>
+                    <p>
+                        HRV (Heart Rate Variability) is a measure of the variation in time
+                        between consecutive heart beats, and is often used as an indicator of the
+                        balance between the sympathetic and parasympathetic nervous systems,
+                        overall health and well-being, as a marker of stress to relaxation ratio.
+                    </p>
+                </ScrollAnimations>
+                <ScrollAnimations animateIn={'animate__fadeInUp'}>
+                    <p>
+                        By monitoring HRV during meditation, you can gain insights on how your body is responding to
+                        meditation practice and make proper adjustments.
+                    </p>
+                </ScrollAnimations>
+                <ScrollAnimations animateIn={'animate__fadeIn'} offset={400}>
+                    <div className={'hrv-blocks'}>
+                        {
+                            [
+                                {img: blockicons[0],
+                                    des: "Track HRV change over time to see if the practice is having a positive impact on your overall well-being"},
+                                {img: blockicons[1], des: "Identify HRV patterns corresponding to stages of the session", secDes:"(e.g. Release to Relax stage transition)",},
+                                {img: blockicons[2],
+                                    des: "Monitor sessions reports and explore the effectiveness of different types of meditation techniques"}
+                            ].map((item, index) => {
+                                return(
+                                    <div className={'hrv-block-wrapper'} key={index}>
+                                        <div className={'img-box'}>
+                                            <img src={item.img} alt={''}/>
+                                        </div>
+                                        <div className={'des-box'}>
+                                            <div className={'inner-box'}>
+                                                <p className={'des'}>{item.des}</p>
+                                                <p className={'sup-description'}>{item.secDes}</p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            )
-                        })
-                    }
-                </div>
-
-                <img alt={'phone'} src={iphone} className={'iphone'}/>
-
+                                )
+                            })
+                        }
+                    </div>
+                </ScrollAnimations>
+                <ScrollAnimations animateIn={'animate__fadeInDown'}>
+                    <img alt={'phone'} src={iphone} className={'iphone'}/>
+                </ScrollAnimations>
                 <div className={'movement-block'}>
                     <h1 className={'move-title'}>Movement tracker</h1>
                     <p>During the meditation, the goal is to focus the mind and bring it to a state of stillness and calm. Monitor your movements to enhance the effectiveness of your meditation sessions.</p>
