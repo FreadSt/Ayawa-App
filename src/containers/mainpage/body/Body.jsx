@@ -87,6 +87,7 @@ const Body = () => {
                         <ScrollAnimations
                             animateIn="animate__fadeInUp"
                             offset={300}
+                            delay={200}
                             animateOnce={true}
                             style={{height:"100px"}}
                         >
@@ -105,6 +106,7 @@ const Body = () => {
                         <ScrollAnimations
                             animateIn="animate__fadeInUp"
                             offset={300}
+                            delay={400}
                             animateOnce={true}
                             style={{height:"100px"}}
                         >
@@ -123,6 +125,7 @@ const Body = () => {
                         <ScrollAnimations
                             animateIn="animate__fadeInUp"
                             offset={300}
+                            delay={600}
                             animateOnce={true}
                             style={{height:"100px"}}
                         >
@@ -427,6 +430,7 @@ const Body = () => {
             <div className={'join-wrapper'}>
                 <ScrollAnimations animateIn={'animate__fadeInUp'}
                                   style={{height:"100px", margin:"5vh 0 10vh"}}
+                                  animateOnce={true}
                 >
                     <div className={'join'}>
                         <video src={videoBG} loop muted autoPlay/>

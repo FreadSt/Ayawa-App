@@ -54,25 +54,30 @@ const UpperBlock = () => {
                     <div className={'description'}>
                         <div className={'title-des'}>
                             <ScrollAnimations animateIn={'animate__fadeInUp'}
-                                              style={{height:"54px"}}>
+                                              style={{height:"54px"}}
+                                              animateOnce={true}>
                                 <h1 className={'title'}>Elevate your</h1>
                             </ScrollAnimations>
                             <ScrollAnimations animateIn={'animate__fadeInUp'}
-                                              style={{height:"54px"}}>
+                                              style={{height:"54px"}}
+                                              animateOnce={true}>
                                 <h1 className={'title'}>meditation</h1>
                             </ScrollAnimations>
                             <ScrollAnimations animateIn={'animate__fadeInUp'}
-                                              style={{height:"54px"}}>
+                                              style={{height:"54px"}}
+                                              animateOnce={true}>
                                 <h1 className={'title'}>experience</h1>
                             </ScrollAnimations>
                             <ScrollAnimations animateIn={'animate__fadeInUp'}
-                                              style={{height:"54px"}}>
+                                              style={{height:"54px"}}
+                                              animateOnce={true}>
                                 <h1 className={'title'}>with Ayawa</h1>
                             </ScrollAnimations>
                         </div>
                         <div className={'upper-des'}>
                             <ScrollAnimations animateIn={"animate__fadeInUp"}
-                                              style={{height:"50px"}}>
+                                              style={{height:"50px"}}
+                                              animateOnce={true}>
                                 <p>AYAWA is a technology-based meditation app that helps to transit from guided relaxation
                                     to true meditation, or / and to enhance
                                     sessions quality.</p>
@@ -80,7 +85,8 @@ const UpperBlock = () => {
                         </div>
                         <div className={'lower-des'}>
                             <ScrollAnimations animateIn={"animate__fadeInUp"}
-                                              style={{height:"54px"}}>
+                                              style={{height:"54px"}}
+                                              animateOnce={true}>
                                 <p>It is the first app on the market designed to track the results of meditation sessions, monitor
                                     the impact of meditations on physical state,
                                     and helps continuously improve the quality
