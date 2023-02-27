@@ -51,9 +51,13 @@
     transition: 350ms ease-in;
     width: 815px;
     height: 667px;
-    margin-bottom: 15vh;
+    margin-bottom: 19vh;
 
   }
+  /*
+    width: 84.10vh;
+    height: 68.83vh;
+    */
   .phoneandclock{
     width: 815px;
     height: 667px;
@@ -189,6 +193,12 @@
           letter-spacing: -2px;
         }
       }
+      .upper-des{
+        height: 120px;
+      }
+      .lower-des{
+        height: 150px;
+      }
       p{
         font-family: GothamRoundedBook;
         color: #ffffff;
@@ -291,7 +301,7 @@
       }
       .description{
         width: 315px;
-        margin: 0;
+        margin: 0 0 30px;
         text-align: left;
         color: #FFFFFF;
         .title{
@@ -329,7 +339,18 @@
     }
   }
 }
+@media(min-width: 2560px){
+  .upper-wrapper{
+    .web-layout{
+      .phoneandclock{
+        width: 1235px;
+        height: 1010px;
+      }
+    }
+  }
+}
 
+/*
 @media only screen and (min--moz-device-pixel-ratio: 2),
 
 only screen and (-o-min-device-pixel-ratio: 2/1),
@@ -346,3 +367,4 @@ only screen and (min-device-pixel-ratio: 2) {
     }
   }
 }
+*/

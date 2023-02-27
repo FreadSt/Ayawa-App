@@ -82,13 +82,13 @@ const Body = () => {
     return(
         <div className={'body-wrapper'}>
             <UpperBlock/>
-            <div className={'inner-box'}>
+            <div className={'inner-container'}>
                     <div className={'cards'}>
                         <ScrollAnimations
                             animateIn="animate__fadeInUp"
                             offset={300}
-                            delay={200}
                             animateOnce={true}
+                            style={{height:"100px"}}
                         >
                             <div className={'card'}>
                                 <div className={'img-box'}>
@@ -105,8 +105,8 @@ const Body = () => {
                         <ScrollAnimations
                             animateIn="animate__fadeInUp"
                             offset={300}
-                            delay={400}
                             animateOnce={true}
+                            style={{height:"100px"}}
                         >
                             <div className={'card'}>
                                 <div className={'img-box'}>
@@ -123,8 +123,8 @@ const Body = () => {
                         <ScrollAnimations
                             animateIn="animate__fadeInUp"
                             offset={300}
-                            delay={600}
                             animateOnce={true}
+                            style={{height:"100px"}}
                         >
                             <div className={'card'}>
                                 <div className={'img-box'}>
@@ -157,27 +157,38 @@ const Body = () => {
                 {/*<img alt={'phone'} src={iphone} className={'iphone layer1'}/>*/}
                 <div className={'hrv-des'}>
                     <div className={'upper-des'}>
-                        <ScrollAnimations animateIn={'animate__fadeInUp'}
-                                          animateOnce={true}
-                        >
-                            <h1 className={'hrv-title'}>Heart Rate Variability Tracker</h1>
-                        </ScrollAnimations>
-                        <ScrollAnimations animateIn={'animate__fadeInUp'}
-                                          animateOnce={true}
-                        >
-                            <p>
-                                HRV (Heart Rate Variability) is a measure of the variation in time
-                                between consecutive heart beats, and is often used as an indicator of the
-                                balance between the sympathetic and parasympathetic nervous systems,
-                                overall health and well-being, as a marker of stress to relaxation ratio.
-                            </p>
-                            <p>
-                                By monitoring HRV during meditation, you can gain insights on how your body is responding to
-                                meditation practice and make proper adjustments.
-                            </p>
-                        </ScrollAnimations>
+                        <div className={'text-wrapper'}>
+                            <div className={'hrv-title'}>
+                                <ScrollAnimations animateIn={'animate__fadeInUp'}
+                                                  style={{height:"50px"}}
+                                                  animateOnce={true}
+                                >
+                                    <h1>Heart Rate Variability Tracker</h1>
+                                </ScrollAnimations>
+                            </div>
+                            <div className={'hrv-p'}>
+                                <ScrollAnimations animateIn={'animate__fadeInUp'}
+                                                  style={{height:"50px"}}
+                                                  animateOnce={true}
+                                >
+                                    <p>
+                                        HRV (Heart Rate Variability) is a measure of the variation in time
+                                        between consecutive heart beats, and is often used as an indicator of the
+                                        balance between the sympathetic and parasympathetic nervous systems,
+                                        overall health and well-being, as a marker of stress to relaxation ratio.
+                                    </p>
+                                    <p>
+                                        By monitoring HRV during meditation, you can gain insights on how your body is responding to
+                                        meditation practice and make proper adjustments.
+                                    </p>
+                                </ScrollAnimations>
+                            </div>
+                        </div>
                         <div className={'hrv-blocks'}>
-                            <ScrollAnimations animateIn={'animate__fadeInUp'} delay={400} animateOnce={true}>
+                            <ScrollAnimations animateIn={'animate__fadeInUp'}
+                                              style={{height:"100px"}}
+                                              animateOnce={true}
+                            >
                                 <div className={'hrv-block-wrapper'}>
                                     <div className={'img-box'}>
                                         <img src={blockicons[0]} alt={''}/>
@@ -189,7 +200,10 @@ const Body = () => {
                                     </div>
                                 </div>
                             </ScrollAnimations>
-                            <ScrollAnimations animateIn={'animate__fadeInUp'} delay={600} animateOnce={true}>
+                            <ScrollAnimations animateIn={'animate__fadeInUp'}
+                                              style={{height:"100px"}}
+                                              animateOnce={true}
+                            >
                                 <div className={'hrv-block-wrapper'}>
                                     <div className={'img-box'}>
                                         <img src={blockicons[1]} alt={''}/>
@@ -202,7 +216,10 @@ const Body = () => {
                                     </div>
                                 </div>
                             </ScrollAnimations>
-                            <ScrollAnimations animateIn={'animate__fadeInUp'} delay={800} animateOnce={true}>
+                            <ScrollAnimations animateIn={'animate__fadeInUp'}
+                                              style={{height:"100px"}}
+                                              animateOnce={true}
+                            >
                                 <div className={'hrv-block-wrapper'}>
                                     <div className={'img-box'}>
                                         <img src={blockicons[2]} alt={''}/>
@@ -221,6 +238,7 @@ const Body = () => {
                     </div>
                     <div className={'movement-block'}>
                         <ScrollAnimations animateIn={'animate__fadeInUp'}
+                                          style={{height:"50px"}}
                                           animateOnce={true}
                         >
                             <h1 className={'move-title'}>Movement tracker</h1>
@@ -228,41 +246,65 @@ const Body = () => {
                         <ScrollAnimations animateIn={'animate__fadeInUp'}
                                           animateOnce={true}
                         >
-                            <p>During the meditation, the goal is to focus the mind and bring it to a state of stillness and calm. Monitor your movements to enhance the effectiveness of your meditation sessions.</p>
+                            <p className={'movement-p'}>During the meditation, the goal is to focus the mind and bring it to a state of stillness and calm. Monitor your movements to enhance the effectiveness of your meditation sessions.</p>
                         </ScrollAnimations>
                             <div className={'movement-boxes'}>
-                                <ScrollAnimations animateIn={'animate__fadeInUp'} delay={400} animateOnce={true}>
-                                    <div className={'move-box'}>
-                                        <div>
-                                            <h1>Reduce distractions</h1>
-                                            <p>Limit the potential for physical distractions, such as discomfort or itchiness</p>
+                                <div className={'box-wrapper'}>
+                                    <ScrollAnimations animateIn={'animate__fadeInUp'}
+                                                      delay={400}
+                                                      style={{height:"100px"}}
+                                                      animateOnce={true}
+                                    >
+                                        <div className={'move-box'}>
+                                            <div>
+                                                <h1>Reduce distractions</h1>
+                                                <p>Limit the potential for physical distractions, such as discomfort or itchiness</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                </ScrollAnimations>
-                                <ScrollAnimations animateIn={'animate__fadeInUp'} delay={600} animateOnce={true}>
-                                    <div className={'move-box'}>
-                                        <div>
-                                            <h1>Increase the focus</h1>
-                                            <p>Focus on your internal experience and awareness and deepen your practice</p>
+                                    </ScrollAnimations>
+                                </div>
+                                <div className={'box-wrapper'}>
+                                    <ScrollAnimations animateIn={'animate__fadeInUp'}
+                                                      delay={600}
+                                                      style={{height:"100px"}}
+                                                      animateOnce={true}
+                                    >
+                                        <div className={'move-box'}>
+                                            <div>
+                                                <h1>Increase the focus</h1>
+                                                <p>Focus on your internal experience and awareness and deepen your practice</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                </ScrollAnimations>
-                                <ScrollAnimations animateIn={'animate__fadeInUp'} delay={800} animateOnce={true}>
-                                    <div className={'move-box'}>
-                                        <div>
-                                            <h1>Maintain the posture</h1>
-                                            <p>That will improve breathing and allow you to relax and focus easier.</p>
+                                    </ScrollAnimations>
+                                </div>
+                                <div className={'box-wrapper'}>
+                                    <ScrollAnimations animateIn={'animate__fadeInUp'}
+                                                      delay={800}
+                                                      style={{height:"100px"}}
+                                                      animateOnce={true}
+                                    >
+                                        <div className={'move-box'}>
+                                            <div>
+                                                <h1>Maintain the posture</h1>
+                                                <p>That will improve breathing and allow you to relax and focus easier.</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                </ScrollAnimations>
-                                <ScrollAnimations animateIn={'animate__fadeInUp'} delay={1000} animateOnce={true}>
-                                    <div className={'move-box'}>
-                                        <div>
-                                            <h1>Boost the mindfulness</h1>
-                                            <p>By staying still you can focus on the present and increase mindfulness</p>
+                                    </ScrollAnimations>
+                                </div>
+                                <div className={'box-wrapper'}>
+                                    <ScrollAnimations animateIn={'animate__fadeInUp'}
+                                                      delay={1000}
+                                                      style={{height:"100px"}}
+                                                      animateOnce={true}
+                                    >
+                                        <div className={'move-box'}>
+                                            <div>
+                                                <h1>Boost the mindfulness</h1>
+                                                <p>By staying still you can focus on the present and increase mindfulness</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                </ScrollAnimations>
+                                    </ScrollAnimations>
+                                </div>
                             </div>
                     </div>
                 </div>
@@ -343,90 +385,102 @@ const Body = () => {
                     </div>
                 </div>
             </div>
-            <ScrollAnimations animateIn={'animate__fadeInUp'} animateOnce={true}>
-                <div className={'promo'}>
-                    <video src={videoBG} autoPlay loop muted/>
-                    <div className={'promo-block'}>
-                        <h1 className={'promo-title'}>First 500 registered users
-                            will get the app for free forever!</h1>
-                        <div className={'promo-btns'}>
-                            <a className={'ios-btn'} href="https://apps.apple.com/ua/app/ayawa/id1670418737">
-                                <img src={iosbtn} className={'ios-content'}/>
-                            </a>
-                            <a disabled className={'disabled'}>
-                                <img src={androidbtn} className={'android-content'}/>
-                            </a>
+            <div className={'promo-wrapper'}>
+                <ScrollAnimations animateIn={'animate__fadeInUp'}
+                                  style={{height:"200px"}}
+                                  animateOnce={true}
+                >
+                    <div className={'promo'}>
+                        <video src={videoBG} autoPlay loop muted/>
+                        <div className={'promo-block'}>
+                            <h1 className={'promo-title'}>First 500 registered users
+                                will get the app for free forever!</h1>
+                            <div className={'promo-btns'}>
+                                <a className={'ios-btn'} href="https://apps.apple.com/ua/app/ayawa/id1670418737">
+                                    <img src={iosbtn} className={'ios-content'}/>
+                                </a>
+                                <a disabled className={'disabled'}>
+                                    <img src={androidbtn} className={'android-content'}/>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </ScrollAnimations>
+                </ScrollAnimations>
+            </div>
             <div className={'advancedAI'}>
                 <ScrollAnimations animateIn={'animate__fadeInUp'} animateOnce={true}>
                     <img src={advancedaiimg} alt={''}/>
                 </ScrollAnimations>
-                <ScrollAnimations animateIn={'animate__fadeInUp'} animateOnce={true}>
-                    <h1>Advanced AI coming soon</h1>
-                </ScrollAnimations>
-                <ScrollAnimations animateIn={'animate__fadeInUp'} animateOnce={true}>
-                    <p>AI is currently at the learning stage and You can help us to speed this process up by simply using AYAWA app.
-                        Hopefully we’ll be able to release advanced AI features as a part of the closest update.</p>
-                    <p style={{margin:'0'}}>Thank you for your patience and support!</p>
+                <div className={'ai-des'}>
+                    <ScrollAnimations animateIn={'animate__fadeInUp'} animateOnce={true}
+                                      style={{height:"60px"}}
+                    >
+                        <h1>Advanced AI coming soon</h1>
+                    </ScrollAnimations>
+                    <ScrollAnimations animateIn={'animate__fadeInUp'} animateOnce={true}>
+                        <p>AI is currently at the learning stage and You can help us to speed this process up by simply using AYAWA app.
+                            Hopefully we’ll be able to release advanced AI features as a part of the closest update.</p>
+                        <p style={{margin:'0'}}>Thank you for your patience and support!</p>
+                    </ScrollAnimations>
+                </div>
+            </div>
+            <div className={'join-wrapper'}>
+                <ScrollAnimations animateIn={'animate__fadeInUp'}
+                                  style={{height:"100px", margin:"5vh 0 10vh"}}
+                >
+                    <div className={'join'}>
+                        <video src={videoBG} loop muted autoPlay/>
+                        <div className={'join-des'}>
+                            <h1>Join the Newsletter</h1>
+                            <span>Get notified on important news and updates from AYAWA</span>
+                            <form className={'join-input'} ref={form} onSubmit={handleSubmit}>
+                                <input placeholder="Email adress"
+                                       type={"text"}
+                                       onChange={handleChangeEmail}
+                                       value={email.value}
+                                       name="user_email"
+                                       className={!isCorrectEmail ? "error-input" : 'submit-input'}
+                                />
+                                {
+                                    isFilled ?
+                                        <div className={'filled-btns'}>
+                                            {isCorrectEmail?
+                                                <button
+                                                    onClick={sendEmail}
+                                                >
+                                                    <img src={rightarrow}/>
+                                                </button>
+                                                :
+                                                <button disabled>
+                                                    <img src={rightarrow}/>
+                                                </button>
+                                            }
+                                        </div>
+                                        :
+                                        <button disabled>
+                                            <img src={rightarrow}/>
+                                        </button>
+                                }
+                            </form>
+                            {!isCorrectEmail ? <span className={'err-message'}>Oops, the Email seems to be misspelled or invalid... Please check and try again.</span> : null}
+                        </div>
+                        {
+                            isSubmit?
+                                <div className="alert-web">
+                                    {isCorrectEmail ?
+                                        <FadeDiv>
+                                            <img src={complete}/>
+                                            <span className="succsess-text">You've successfully subscribed</span>
+                                        </FadeDiv>
+                                        :
+                                        null
+                                    }
+                                </div>
+                                : null
+                        }
+                    </div>
                 </ScrollAnimations>
             </div>
-            <ScrollAnimations animateIn={'animate__fadeInUp'} animateOnce={true}>
-                <div className={'join'}>
-                    <video src={videoBG} loop muted autoPlay/>
-                    <div className={'join-des'}>
-                        <h1>Join the Newsletter</h1>
-                        <span>Get notified on important news and updates from AYAWA</span>
-                        <form className={'join-input'} ref={form} onSubmit={handleSubmit}>
-                            <input placeholder="Email adress"
-                                   type={"text"}
-                                   onChange={handleChangeEmail}
-                                   value={email.value}
-                                   name="user_email"
-                                   className={!isCorrectEmail ? "error-input" : 'submit-input'}
-                            />
-                            {
-                                isFilled ?
-                                    <div className={'filled-btns'}>
-                                        {isCorrectEmail?
-                                            <button
-                                                onClick={sendEmail}
-                                            >
-                                                <img src={rightarrow}/>
-                                            </button>
-                                            :
-                                            <button disabled>
-                                                <img src={rightarrow}/>
-                                            </button>
-                                        }
-                                    </div>
-                                    :
-                                    <button disabled>
-                                        <img src={rightarrow}/>
-                                    </button>
-                            }
-                        </form>
-                        {!isCorrectEmail ? <span className={'err-message'}>Oops, the Email seems to be misspelled or invalid... Please check and try again.</span> : null}
-                    </div>
-                    {
-                        isSubmit?
-                            <div className="alert-web">
-                                {isCorrectEmail ?
-                                    <FadeDiv>
-                                        <img src={complete}/>
-                                        <span className="succsess-text">You've successfully subscribed</span>
-                                    </FadeDiv>
-                                    :
-                                    null
-                                }
-                            </div>
-                            : null
-                    }
-
-                </div>
-            </ScrollAnimations>
             {
                 isSubmit?
                     <div className="alert">
